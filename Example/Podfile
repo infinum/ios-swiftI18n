@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftI18n_Example' do
+  pod 'SwiftI18n', :path => '../'
+
+  target 'SwiftI18n_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
