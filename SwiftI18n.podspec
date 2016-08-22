@@ -8,35 +8,28 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftI18n.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SwiftI18n'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.version          = '0.0.1'
+  s.summary          = 'TODO: A short description of SwiftI18n.'
+  s.homepage         = 'https://bitbucket.org/Vlaho/swifti18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Vlaho Poluta' => 'vlaho.poluta@infinum.hr' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SwiftI18n.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'git@bitbucket.org:Vlaho/swifti18n.git', :tag => s.version.to_s }
+  s.requires_arc = true
+  s.ios.deployment_target = '9.0'
 
-  s.ios.deployment_target = '8.0'
+  s.description      = <<-DESC
+                        TODO: Add long description of the pod here.
+                       DESC
 
-  s.source_files = 'SwiftI18n/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SwiftI18n' => ['SwiftI18n/Assets/*.png']
-  # }
+  s.subspec "I18n" do  |spec|
+    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/View/**/*']
+    spec.source_files = source_files
+  end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec "I18n+Case" do  |spec|
+    source_files = ['SwiftI18n/Classes/**/*']
+    spec.source_files = source_files
+    spec.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => "-D CASE" }
+  end
+
 end
