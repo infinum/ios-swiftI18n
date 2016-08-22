@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
                        DESC
 
   s.subspec "I18n" do  |spec|
-    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/View/**/*']
+    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/**/*']
     spec.source_files = source_files
   end
 
