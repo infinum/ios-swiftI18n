@@ -30,7 +30,8 @@
     {
       "name": "I18n+Case",
       "source_files": [
-        "SwiftI18n/Classes/**/*"
+        "SwiftI18n/Classes/{Main,Case}/**/*",
+        "SwiftI18n/Classes/Views/{BaseViews,CaseViews}/**/*"
       ]
     }
   ]

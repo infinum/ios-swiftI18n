@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UITextField: I18n {
+extension UITextField: I18n {
     
     private static let case_titleKey = "CKEY"
     private static let case_placeholderKey = "CPKEY"
@@ -43,12 +43,12 @@ public extension UITextField: I18n {
         
         if let text = text {
             let caseTransform = loc_keysDictionary[UITextField.case_titleKey]
-            self.text = text?.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+            self.text = text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
         }
         
         if let placeholder = placeholder {
             let casePlaceholderTransform = loc_keysDictionary[UITextField.case_placeholderKey]
-            self.placeholder = placeholder?.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+            self.placeholder = placeholder.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
         }
         
     }

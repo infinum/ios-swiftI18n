@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "I18n+Case" do  |spec|
-    source_files = ['SwiftI18n/Classes/**/*']
+    source_files = ['SwiftI18n/Classes/{Main,Case}/**/*', 'SwiftI18n/Classes/Views/{BaseViews,CaseViews}/**/*']
     spec.source_files = source_files
   end
 

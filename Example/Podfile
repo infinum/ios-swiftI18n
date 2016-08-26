@@ -2,7 +2,7 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'SwiftI18n_Example' do
-  pod 'SwiftI18n/I18n', :path => '../'
+  pod 'SwiftI18n/I18n+Case', :path => '../'
 
   target 'SwiftI18n_Tests' do
     inherit! :search_paths

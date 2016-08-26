@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UITextView: I18n {
+extension UITextView: I18n {
     
     private static let case_titleKey = "CKEY"
     

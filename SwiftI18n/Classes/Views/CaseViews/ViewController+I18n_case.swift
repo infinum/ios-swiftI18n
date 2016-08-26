@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIViewController: I18n {
+extension UIViewController: I18n {
     
     private static let case_titleKey = "CKEY"
     

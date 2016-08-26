@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UILabel: I18n {
+extension UILabel: I18n {
     
     private static let case_titleKey = "CKEY"
     

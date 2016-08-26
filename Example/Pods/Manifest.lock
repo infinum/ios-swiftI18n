@@ -1,16 +1,16 @@
 PODS:
-  - SwiftI18n/I18n (0.0.1)
+  - SwiftI18n/I18n+Case (0.0.1)
 
 DEPENDENCIES:
-  - SwiftI18n/I18n (from `../`)
+  - SwiftI18n/I18n+Case (from `../`)
 
 EXTERNAL SOURCES:
   SwiftI18n:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftI18n: 2ac10671a64f98acfec7849ba40d7a6c55a90968
+  SwiftI18n: 777866e3510164b02c2500510f15a341afcbbbce
 
-PODFILE CHECKSUM: 0dd08460444a56f6f2f10fa0748a01d5b87ee99c
+PODFILE CHECKSUM: 6a49c5bf4b8522fbd3253e09a7658797433fb583
 
 COCOAPODS: 1.0.1

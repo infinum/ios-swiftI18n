@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIButton: I18n {
+extension UIButton: I18n {
     
     private static let case_titleKey = "CKEY"
     
