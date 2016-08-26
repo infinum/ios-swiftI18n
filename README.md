@@ -17,7 +17,8 @@ SwiftI18n is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "SwiftI18n"
+pod 'SwiftI18n/I18n'
+pod 'SwiftI18n/I18n+Case'
 ```
 
 ## Author
