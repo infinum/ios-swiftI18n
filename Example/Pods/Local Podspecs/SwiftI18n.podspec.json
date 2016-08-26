@@ -1,9 +1,8 @@
 {
   "name": "SwiftI18n",
-  "version": "0.1.0",
-  "summary": "A short description of SwiftI18n.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/SwiftI18n",
+  "version": "0.0.1",
+  "summary": "TODO: A short description of SwiftI18n.",
+  "homepage": "https://bitbucket.org/Vlaho/swifti18n",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +11,27 @@
     "Vlaho Poluta": "vlaho.poluta@infinum.hr"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/SwiftI18n.git",
-    "tag": "0.1.0"
+    "git": "git@bitbucket.org:Vlaho/swifti18n.git",
+    "tag": "0.0.1"
   },
+  "requires_arc": true,
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "SwiftI18n/Classes/**/*"
+  "description": "TODO: Add long description of the pod here.",
+  "subspecs": [
+    {
+      "name": "I18n",
+      "source_files": [
+        "SwiftI18n/Classes/Main/**/*",
+        "SwiftI18n/Classes/Views/{BaseViews,PlainViews}/**/*"
+      ]
+    },
+    {
+      "name": "I18n+Case",
+      "source_files": [
+        "SwiftI18n/Classes/**/*"
+      ]
+    }
+  ]
 }

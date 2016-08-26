@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		07F75C60C654E0743082628178A30945 /* Pods-SwiftI18n_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CAB0B0B8A6AF64B9B520071266563AA /* Pods-SwiftI18n_Example-dummy.m */; };
 		0CF47F11AD3E73079C4F717CF9244BD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		0EEE0D0162276B349D7D01E194D016E9 /* ViewController+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B259C83E36D55D5B28697D27415597E /* ViewController+I18n_loc.swift */; };
+		1263FCFC7DBC32C5FD56B10E6181AACA /* UITextField+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128C08020B623E530CB8847AFFFA12F3 /* UITextField+I18n_loc.swift */; };
 		16E8F63E4C4EF58561F190B52F1061A5 /* Pods-SwiftI18n_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A22C389DF8812ED2A44A2948CB3BAAC1 /* Pods-SwiftI18n_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		17A5304F58CE136971A816D853123BD0 /* I18nManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323C5DCD1E76BF8C2C2AE2C23C05A768 /* I18nManager.swift */; };
-		264309B9774CEA41D0F59F11B321E043 /* UILabel+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF7634A96665DE6D86B09288A208AD /* UILabel+I18n.swift */; };
-		2670F47FEFBB2BD491DFE06CFD018F0F /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AFD221FFB097A344B847BCFBA40D18 /* I18n.swift */; };
-		28C14ADB087ED81D15AF20DC9617B50F /* ViewController+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907F507860E6B0DAD8A7A0C065C179E8 /* ViewController+I18n.swift */; };
-		324844E0C12EAE94FEB521E16A193429 /* UITextField+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC2DDE5DAB0BA96F35DD741A8CE12B7 /* UITextField+I18n.swift */; };
-		5845D0780885922A154A610316618269 /* I18nCaseI18nCaseTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809B24764D76432AA19F817FDADF0F49 /* I18nCaseI18nCaseTransform.swift */; };
-		79E9E49DBE4D6D8FD670283C61B6B936 /* SwiftI18n-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D12FE3F9F011B3B77A1B3062F41507 /* SwiftI18n-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		919DD921AEBEC8CF26133C1A8C1B851C /* UIButton+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9566756287894091E2CEAF242425F37 /* UIButton+I18n.swift */; };
-		95BAA3729485856BB258F4847EB30DCB /* NSNotification+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285043CF50F568B36126CD62C0AFEAC2 /* NSNotification+I18n.swift */; };
+		208D5E076A58C9E8463F01DFE6855E0A /* I18nManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D5A99A8BC5AB43BDAB51D9B2EDEE7 /* I18nManager.swift */; };
+		39DF92F29163427E791AEA30D74ED36D /* UITextView+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAF7EF37B058E5A7C222E4A94339AD2 /* UITextView+I18n.swift */; };
+		4CE0CBE1D5566B281BA33590181B6EFF /* UIButton+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25C7632D8241B2C3600AED832E751F1 /* UIButton+I18n_loc.swift */; };
+		5C71BD73092A0BC2303681C123E9ADF8 /* UITextField+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17719D9978D18EF30F4CBB3C5D597A5C /* UITextField+I18n.swift */; };
+		610198931A72B9CB5F622A72A120F7C2 /* NSNotification+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B884D1A6A275F4E4B5761023B7F607 /* NSNotification+I18n.swift */; };
+		77FE6464259DCA732C68F6F864D935D0 /* UIButton+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9273740F142A0FE18B4F4CE58A5C1403 /* UIButton+I18n.swift */; };
+		79E9E49DBE4D6D8FD670283C61B6B936 /* SwiftI18n-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1102191E8E99EB198B3111F4897BA3D1 /* SwiftI18n-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96481EBFF3C2627FCB5818C0D47FC285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 		9A4A5CA802BF3447CD22E53B934D9726 /* Pods-SwiftI18n_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54220BCF40235EDB04BA80657AB303AF /* Pods-SwiftI18n_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B732A7E771727325A6055D5A766D175 /* UILabel+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC105CD1A755C96BD50A2154AEBA2E33 /* UILabel+I18n.swift */; };
+		9FE85CA775AE0012B232BBB9E009D05D /* String+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA6CBA1CCB6009B18623FDDE48B570F /* String+I18n.swift */; };
 		A91B1134695077E9C81DA695D048AF72 /* Pods-SwiftI18n_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF7A3B8F5316E9415D7A8FC97EE4CD8 /* Pods-SwiftI18n_Tests-dummy.m */; };
-		BCAD51523E4C2889D4E9F05CCB76A1ED /* SwiftI18n-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB6317DD1E1B71A0B92763FACB8C221 /* SwiftI18n-dummy.m */; };
-		D2DDD034DE9C2575867C31BC6C2F4F53 /* UITextView+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418819DA3360FB364879017F2ECFB822 /* UITextView+I18n.swift */; };
+		AC58D005D9F7F604D52E74B82C51B1E0 /* ViewController+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = C288741A12A586340216F61BCD1D182C /* ViewController+I18n.swift */; };
 		DD41B4C2FF6F45D7F5A9970BF782066C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		E123DE22BD2E7D4BB62C48B6FE5A4488 /* String+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EBCD0CD51CF09017F04BCA537002A6 /* String+I18n.swift */; };
+		DD955E5CCD520009686DA82A0984B70A /* SwiftI18n-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 813C4B54F6D274F139300320B12D25DA /* SwiftI18n-dummy.m */; };
+		ECD52FAD419E924BF1912AE1F51085BB /* UITextView+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C094AA7409770C389A533DC1948A05 /* UITextView+I18n_loc.swift */; };
+		F9BBE19855BDD711D0AAAD1AA9D14DBD /* I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D5094815224A5A5A64BF17BB90D866 /* I18n.swift */; };
+		FCF3E15AB1C091EC9B0D432D6C841E53 /* UILabel+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D261B8B3D85B4181C1CC566E9CC79D65 /* UILabel+I18n_loc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,47 +43,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00D12FE3F9F011B3B77A1B3062F41507 /* SwiftI18n-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftI18n-umbrella.h"; sourceTree = "<group>"; };
-		0BBE0E43DCE5F249A6E5A3171CB89B79 /* SwiftI18n-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftI18n-prefix.pch"; sourceTree = "<group>"; };
 		0C7775EA47FBA2104140343F73D1215C /* Pods-SwiftI18n_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftI18n_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1102191E8E99EB198B3111F4897BA3D1 /* SwiftI18n-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftI18n-umbrella.h"; sourceTree = "<group>"; };
+		128C08020B623E530CB8847AFFFA12F3 /* UITextField+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextField+I18n_loc.swift"; sourceTree = "<group>"; };
 		12DBD216CAD90763375AABB2F5A87414 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17719D9978D18EF30F4CBB3C5D597A5C /* UITextField+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextField+I18n.swift"; sourceTree = "<group>"; };
 		1884A85B24248B1DE9AF1069EA905FFE /* Pods-SwiftI18n_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftI18n_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1CBF7634A96665DE6D86B09288A208AD /* UILabel+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+I18n.swift"; sourceTree = "<group>"; };
 		1F1B0E0B3FD69784B7A54C9A5BD29567 /* Pods_SwiftI18n_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftI18n_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FE2CC3F5C53EC752146116EE4D3E0C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F3CD55D5BF4A577227540AD6EDFD35 /* Pods-SwiftI18n_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftI18n_Tests.modulemap"; sourceTree = "<group>"; };
-		285043CF50F568B36126CD62C0AFEAC2 /* NSNotification+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSNotification+I18n.swift"; sourceTree = "<group>"; };
 		2AACE89E83FCD006F419001FE18461B1 /* Pods-SwiftI18n_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftI18n_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		323C5DCD1E76BF8C2C2AE2C23C05A768 /* I18nManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18nManager.swift; sourceTree = "<group>"; };
+		31C094AA7409770C389A533DC1948A05 /* UITextView+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+I18n_loc.swift"; sourceTree = "<group>"; };
 		33F7F732696753010378400C86D264CA /* Pods-SwiftI18n_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftI18n_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		3D16109BC753AF6ACBBDFB53C4F7A481 /* Pods-SwiftI18n_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftI18n_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		418819DA3360FB364879017F2ECFB822 /* UITextView+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+I18n.swift"; sourceTree = "<group>"; };
-		41AFD221FFB097A344B847BCFBA40D18 /* I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
+		3FA6CBA1CCB6009B18623FDDE48B570F /* String+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+I18n.swift"; sourceTree = "<group>"; };
+		4364AA56AB7256B0DFC613AB7F1AC084 /* SwiftI18n-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftI18n-prefix.pch"; sourceTree = "<group>"; };
+		43D5094815224A5A5A64BF17BB90D866 /* I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
 		4C193CF7B6161B47480D609F41F36D0A /* Pods-SwiftI18n_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftI18n_Example-resources.sh"; sourceTree = "<group>"; };
-		4F353FCF77C8DAE2D2376A412C54479E /* SwiftI18n.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftI18n.xcconfig; sourceTree = "<group>"; };
 		54220BCF40235EDB04BA80657AB303AF /* Pods-SwiftI18n_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftI18n_Example-umbrella.h"; sourceTree = "<group>"; };
-		65EBCD0CD51CF09017F04BCA537002A6 /* String+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+I18n.swift"; sourceTree = "<group>"; };
+		6B259C83E36D55D5B28697D27415597E /* ViewController+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ViewController+I18n_loc.swift"; sourceTree = "<group>"; };
+		6EE35A5DB92029352756EE214C6C345D /* SwiftI18n.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftI18n.modulemap; sourceTree = "<group>"; };
 		71CCD6481F9151238363C2BCFD4F8352 /* Pods-SwiftI18n_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftI18n_Example-frameworks.sh"; sourceTree = "<group>"; };
-		8002CC765030B18B81161DF55E406FD2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		809B24764D76432AA19F817FDADF0F49 /* I18nCaseI18nCaseTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18nCaseI18nCaseTransform.swift; sourceTree = "<group>"; };
+		75A3287382FB12D1904FD8D3EB1A4E8E /* SwiftI18n.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftI18n.xcconfig; sourceTree = "<group>"; };
+		7B8D5A99A8BC5AB43BDAB51D9B2EDEE7 /* I18nManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18nManager.swift; sourceTree = "<group>"; };
+		813C4B54F6D274F139300320B12D25DA /* SwiftI18n-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftI18n-dummy.m"; sourceTree = "<group>"; };
 		8CAB0B0B8A6AF64B9B520071266563AA /* Pods-SwiftI18n_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftI18n_Example-dummy.m"; sourceTree = "<group>"; };
-		8FC2DDE5DAB0BA96F35DD741A8CE12B7 /* UITextField+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextField+I18n.swift"; sourceTree = "<group>"; };
-		907F507860E6B0DAD8A7A0C065C179E8 /* ViewController+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ViewController+I18n.swift"; sourceTree = "<group>"; };
+		9273740F142A0FE18B4F4CE58A5C1403 /* UIButton+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+I18n.swift"; sourceTree = "<group>"; };
 		92F7DA50C70F66C128E9BE0F40EDC209 /* Pods-SwiftI18n_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftI18n_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9CB6317DD1E1B71A0B92763FACB8C221 /* SwiftI18n-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftI18n-dummy.m"; sourceTree = "<group>"; };
 		9DD7F846FD21FF1E8319BA094C1433E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A22C389DF8812ED2A44A2948CB3BAAC1 /* Pods-SwiftI18n_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftI18n_Tests-umbrella.h"; sourceTree = "<group>"; };
 		A5BCA5EA3A5ED9EDDF3B411F2570BB0E /* SwiftI18n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftI18n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9566756287894091E2CEAF242425F37 /* UIButton+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+I18n.swift"; sourceTree = "<group>"; };
 		B90CDC5933A4DFF0E57301FF8B6C4D58 /* Pods-SwiftI18n_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftI18n_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C288741A12A586340216F61BCD1D182C /* ViewController+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ViewController+I18n.swift"; sourceTree = "<group>"; };
 		CDF7A3B8F5316E9415D7A8FC97EE4CD8 /* Pods-SwiftI18n_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftI18n_Tests-dummy.m"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CF9582FB0DB07049E8FEB1F1E64F8955 /* SwiftI18n.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftI18n.modulemap; sourceTree = "<group>"; };
+		D261B8B3D85B4181C1CC566E9CC79D65 /* UILabel+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+I18n_loc.swift"; sourceTree = "<group>"; };
 		D3D7EA10D8056F165FE17E997DEC4372 /* Pods-SwiftI18n_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftI18n_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DFCF95B16B0970949A4D79E73B701150 /* Pods_SwiftI18n_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftI18n_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EEE3776E9B7281A29FC33526EEB1CC /* Pods-SwiftI18n_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SwiftI18n_Example.modulemap"; sourceTree = "<group>"; };
 		E5E82515706349C92DCE65EFC5FF82F0 /* Pods-SwiftI18n_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftI18n_Example.release.xcconfig"; sourceTree = "<group>"; };
+		EC105CD1A755C96BD50A2154AEBA2E33 /* UILabel+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UILabel+I18n.swift"; sourceTree = "<group>"; };
+		F25C7632D8241B2C3600AED832E751F1 /* UIButton+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+I18n_loc.swift"; sourceTree = "<group>"; };
+		F7B884D1A6A275F4E4B5761023B7F607 /* NSNotification+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSNotification+I18n.swift"; sourceTree = "<group>"; };
 		FD8C749C2716A8DD9BB2634B4936018C /* Pods-SwiftI18n_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftI18n_Tests-resources.sh"; sourceTree = "<group>"; };
+		FDAF7EF37B058E5A7C222E4A94339AD2 /* UITextView+I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+I18n.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,22 +118,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CB398CC9E8E5652C54C56DE7BA6D402 /* Classes */ = {
+		1DBB75BA04D7FFE8B2DFF912C33CCAEB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B1083731ADADE8AE4C931BF14D8323CF /* Case */,
-				A1CE954C4E5C0D1F7AD53723E66BB666 /* Main */,
-				3F340D9F7FE1FBCAA4C6E52FB594F2AB /* Views */,
+				43D5094815224A5A5A64BF17BB90D866 /* I18n.swift */,
+				7B8D5A99A8BC5AB43BDAB51D9B2EDEE7 /* I18nManager.swift */,
+				F7B884D1A6A275F4E4B5761023B7F607 /* NSNotification+I18n.swift */,
+				3FA6CBA1CCB6009B18623FDDE48B570F /* String+I18n.swift */,
 			);
-			path = Classes;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		307C8D720E1E52CB978E9CA656AB7F05 /* SwiftI18n */ = {
+		202E657041160569CDE57BBC7FE93EA6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CB398CC9E8E5652C54C56DE7BA6D402 /* Classes */,
+				20FE2CC3F5C53EC752146116EE4D3E0C /* Info.plist */,
+				6EE35A5DB92029352756EE214C6C345D /* SwiftI18n.modulemap */,
+				75A3287382FB12D1904FD8D3EB1A4E8E /* SwiftI18n.xcconfig */,
+				813C4B54F6D274F139300320B12D25DA /* SwiftI18n-dummy.m */,
+				4364AA56AB7256B0DFC613AB7F1AC084 /* SwiftI18n-prefix.pch */,
+				1102191E8E99EB198B3111F4897BA3D1 /* SwiftI18n-umbrella.h */,
 			);
-			path = SwiftI18n;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SwiftI18n";
+			sourceTree = "<group>";
+		};
+		316C1E7CA871A70F2B24575C439F787E /* SwiftI18n */ = {
+			isa = PBXGroup;
+			children = (
+				7D8D0F401584D8A13A5BD2FBFD6DE67E /* I18n */,
+				202E657041160569CDE57BBC7FE93EA6 /* Support Files */,
+			);
+			name = SwiftI18n;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		37F4D13CA1D1E83C049C34D4F8F4321D /* Pods-SwiftI18n_Example */ = {
@@ -154,26 +179,21 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		3F340D9F7FE1FBCAA4C6E52FB594F2AB /* Views */ = {
+		58DDE3D73171BC8F45D0A320F62ED2A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A9566756287894091E2CEAF242425F37 /* UIButton+I18n.swift */,
-				1CBF7634A96665DE6D86B09288A208AD /* UILabel+I18n.swift */,
-				8FC2DDE5DAB0BA96F35DD741A8CE12B7 /* UITextField+I18n.swift */,
-				418819DA3360FB364879017F2ECFB822 /* UITextView+I18n.swift */,
-				907F507860E6B0DAD8A7A0C065C179E8 /* ViewController+I18n.swift */,
+				C577FD8ECABC53F3325BF603BA974610 /* BaseViews */,
+				B6D99AAE9ECD694CE661CF799FB88628 /* PlainViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		5DC4ADDF14BC296DAD7CDDF26610161B /* SwiftI18n */ = {
+		594D5B2AEE9FF4D3F40581C6B04F40EE /* SwiftI18n */ = {
 			isa = PBXGroup;
 			children = (
-				A1CA4924D4B6F9E83EB3107283D61E1C /* Support Files */,
-				307C8D720E1E52CB978E9CA656AB7F05 /* SwiftI18n */,
+				EDF7CA22D904B0D2F6FDA8B13D15B10A /* Classes */,
 			);
-			name = SwiftI18n;
-			path = ../..;
+			path = SwiftI18n;
 			sourceTree = "<group>";
 		};
 		6BEE8A202EA3DCBFA521B4D45599122D /* Products */ = {
@@ -184,6 +204,14 @@
 				A5BCA5EA3A5ED9EDDF3B411F2570BB0E /* SwiftI18n.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7D8D0F401584D8A13A5BD2FBFD6DE67E /* I18n */ = {
+			isa = PBXGroup;
+			children = (
+				594D5B2AEE9FF4D3F40581C6B04F40EE /* SwiftI18n */,
+			);
+			name = I18n;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -197,37 +225,16 @@
 			);
 			sourceTree = "<group>";
 		};
-		A1CA4924D4B6F9E83EB3107283D61E1C /* Support Files */ = {
+		B6D99AAE9ECD694CE661CF799FB88628 /* PlainViews */ = {
 			isa = PBXGroup;
 			children = (
-				8002CC765030B18B81161DF55E406FD2 /* Info.plist */,
-				CF9582FB0DB07049E8FEB1F1E64F8955 /* SwiftI18n.modulemap */,
-				4F353FCF77C8DAE2D2376A412C54479E /* SwiftI18n.xcconfig */,
-				9CB6317DD1E1B71A0B92763FACB8C221 /* SwiftI18n-dummy.m */,
-				0BBE0E43DCE5F249A6E5A3171CB89B79 /* SwiftI18n-prefix.pch */,
-				00D12FE3F9F011B3B77A1B3062F41507 /* SwiftI18n-umbrella.h */,
+				9273740F142A0FE18B4F4CE58A5C1403 /* UIButton+I18n.swift */,
+				EC105CD1A755C96BD50A2154AEBA2E33 /* UILabel+I18n.swift */,
+				17719D9978D18EF30F4CBB3C5D597A5C /* UITextField+I18n.swift */,
+				FDAF7EF37B058E5A7C222E4A94339AD2 /* UITextView+I18n.swift */,
+				C288741A12A586340216F61BCD1D182C /* ViewController+I18n.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SwiftI18n";
-			sourceTree = "<group>";
-		};
-		A1CE954C4E5C0D1F7AD53723E66BB666 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				41AFD221FFB097A344B847BCFBA40D18 /* I18n.swift */,
-				323C5DCD1E76BF8C2C2AE2C23C05A768 /* I18nManager.swift */,
-				285043CF50F568B36126CD62C0AFEAC2 /* NSNotification+I18n.swift */,
-				65EBCD0CD51CF09017F04BCA537002A6 /* String+I18n.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		B1083731ADADE8AE4C931BF14D8323CF /* Case */ = {
-			isa = PBXGroup;
-			children = (
-				809B24764D76432AA19F817FDADF0F49 /* I18nCaseI18nCaseTransform.swift */,
-			);
-			path = Case;
+			path = PlainViews;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -241,7 +248,7 @@
 		BEA350B011CBBC5C7BFC634A49C7848D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5DC4ADDF14BC296DAD7CDDF26610161B /* SwiftI18n */,
+				316C1E7CA871A70F2B24575C439F787E /* SwiftI18n */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -271,6 +278,27 @@
 				BF189160D4CB15BB10606E5880667BAA /* Pods-SwiftI18n_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C577FD8ECABC53F3325BF603BA974610 /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				F25C7632D8241B2C3600AED832E751F1 /* UIButton+I18n_loc.swift */,
+				D261B8B3D85B4181C1CC566E9CC79D65 /* UILabel+I18n_loc.swift */,
+				128C08020B623E530CB8847AFFFA12F3 /* UITextField+I18n_loc.swift */,
+				31C094AA7409770C389A533DC1948A05 /* UITextView+I18n_loc.swift */,
+				6B259C83E36D55D5B28697D27415597E /* ViewController+I18n_loc.swift */,
+			);
+			path = BaseViews;
+			sourceTree = "<group>";
+		};
+		EDF7CA22D904B0D2F6FDA8B13D15B10A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1DBB75BA04D7FFE8B2DFF912C33CCAEB /* Main */,
+				58DDE3D73171BC8F45D0A320F62ED2A8 /* Views */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +370,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 299917FC93018778AE6FDCB3746BB453 /* Build configuration list for PBXNativeTarget "SwiftI18n" */;
 			buildPhases = (
-				D62421A6297A376775D432AFA37BF6DA /* Sources */,
+				92597ADBE30B0ACFA72C3971E287A6A2 /* Sources */,
 				FCEE05625A72C0BD42B86DDB85AFDC56 /* Frameworks */,
 				D12D9BAE4A14415B1AC3B9F942D7F341 /* Headers */,
 			);
@@ -392,29 +420,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92597ADBE30B0ACFA72C3971E287A6A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BBE19855BDD711D0AAAD1AA9D14DBD /* I18n.swift in Sources */,
+				208D5E076A58C9E8463F01DFE6855E0A /* I18nManager.swift in Sources */,
+				610198931A72B9CB5F622A72A120F7C2 /* NSNotification+I18n.swift in Sources */,
+				9FE85CA775AE0012B232BBB9E009D05D /* String+I18n.swift in Sources */,
+				DD955E5CCD520009686DA82A0984B70A /* SwiftI18n-dummy.m in Sources */,
+				77FE6464259DCA732C68F6F864D935D0 /* UIButton+I18n.swift in Sources */,
+				4CE0CBE1D5566B281BA33590181B6EFF /* UIButton+I18n_loc.swift in Sources */,
+				9B732A7E771727325A6055D5A766D175 /* UILabel+I18n.swift in Sources */,
+				FCF3E15AB1C091EC9B0D432D6C841E53 /* UILabel+I18n_loc.swift in Sources */,
+				5C71BD73092A0BC2303681C123E9ADF8 /* UITextField+I18n.swift in Sources */,
+				1263FCFC7DBC32C5FD56B10E6181AACA /* UITextField+I18n_loc.swift in Sources */,
+				39DF92F29163427E791AEA30D74ED36D /* UITextView+I18n.swift in Sources */,
+				ECD52FAD419E924BF1912AE1F51085BB /* UITextView+I18n_loc.swift in Sources */,
+				AC58D005D9F7F604D52E74B82C51B1E0 /* ViewController+I18n.swift in Sources */,
+				0EEE0D0162276B349D7D01E194D016E9 /* ViewController+I18n_loc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEAFBE55256057C1DF79308755D390E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				07F75C60C654E0743082628178A30945 /* Pods-SwiftI18n_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D62421A6297A376775D432AFA37BF6DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2670F47FEFBB2BD491DFE06CFD018F0F /* I18n.swift in Sources */,
-				5845D0780885922A154A610316618269 /* I18nCaseI18nCaseTransform.swift in Sources */,
-				17A5304F58CE136971A816D853123BD0 /* I18nManager.swift in Sources */,
-				95BAA3729485856BB258F4847EB30DCB /* NSNotification+I18n.swift in Sources */,
-				E123DE22BD2E7D4BB62C48B6FE5A4488 /* String+I18n.swift in Sources */,
-				BCAD51523E4C2889D4E9F05CCB76A1ED /* SwiftI18n-dummy.m in Sources */,
-				919DD921AEBEC8CF26133C1A8C1B851C /* UIButton+I18n.swift in Sources */,
-				264309B9774CEA41D0F59F11B321E043 /* UILabel+I18n.swift in Sources */,
-				324844E0C12EAE94FEB521E16A193429 /* UITextField+I18n.swift in Sources */,
-				D2DDD034DE9C2575867C31BC6C2F4F53 /* UITextView+I18n.swift in Sources */,
-				28C14ADB087ED81D15AF20DC9617B50F /* ViewController+I18n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,209 +462,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0C49CC403FE4D193352F6F83A1B0AA38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1884A85B24248B1DE9AF1069EA905FFE /* Pods-SwiftI18n_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Tests/Pods-SwiftI18n_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftI18n_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		385EE0DD7016DF8C25EA4FB1700A91D9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92F7DA50C70F66C128E9BE0F40EDC209 /* Pods-SwiftI18n_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Example/Pods-SwiftI18n_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftI18n_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6F7D0F16BB68B743C89E5EA783551725 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5E82515706349C92DCE65EFC5FF82F0 /* Pods-SwiftI18n_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Example/Pods-SwiftI18n_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SwiftI18n_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8085111B2099477E8BB15F875290759B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F353FCF77C8DAE2D2376A412C54479E /* SwiftI18n.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftI18n/SwiftI18n-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftI18n/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftI18n/SwiftI18n.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftI18n;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8EC690515DB730A3A89BAA23052D24C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F353FCF77C8DAE2D2376A412C54479E /* SwiftI18n.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftI18n/SwiftI18n-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftI18n/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftI18n/SwiftI18n.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftI18n;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -667,14 +497,77 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E44571F0A4B7C0597AEFF6EB5D79AEBD /* Debug */ = {
+		0813D3F0453EB7DB7614865F01917D57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A3287382FB12D1904FD8D3EB1A4E8E /* SwiftI18n.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftI18n/SwiftI18n-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftI18n/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SwiftI18n/SwiftI18n.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftI18n;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0E97ED3A3C9A0A6F4E4641CC57E37134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A3287382FB12D1904FD8D3EB1A4E8E /* SwiftI18n.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftI18n/SwiftI18n-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftI18n/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SwiftI18n/SwiftI18n.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftI18n;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		47616F253C58A7DC49E61198F2364451 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2AACE89E83FCD006F419001FE18461B1 /* Pods-SwiftI18n_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -689,9 +582,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Tests/Pods-SwiftI18n_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -708,14 +602,158 @@
 			};
 			name = Debug;
 		};
+		8C1D0273424A4365A35B2001CEE72D70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E82515706349C92DCE65EFC5FF82F0 /* Pods-SwiftI18n_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Example/Pods-SwiftI18n_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftI18n_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		921E883C00557AD816D0F3CA07FF1371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1884A85B24248B1DE9AF1069EA905FFE /* Pods-SwiftI18n_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Tests/Pods-SwiftI18n_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftI18n_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A7314996783A9B24A8AEFE3B1DA522D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F7DA50C70F66C128E9BE0F40EDC209 /* Pods-SwiftI18n_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SwiftI18n_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Pods-SwiftI18n_Example/Pods-SwiftI18n_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SwiftI18n_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		299917FC93018778AE6FDCB3746BB453 /* Build configuration list for PBXNativeTarget "SwiftI18n" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8EC690515DB730A3A89BAA23052D24C2 /* Debug */,
-				8085111B2099477E8BB15F875290759B /* Release */,
+				0813D3F0453EB7DB7614865F01917D57 /* Debug */,
+				0E97ED3A3C9A0A6F4E4641CC57E37134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -723,8 +761,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
-				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -732,8 +770,8 @@
 		4C6B3CFE5D1F67DC146DC39CC339B33E /* Build configuration list for PBXNativeTarget "Pods-SwiftI18n_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				385EE0DD7016DF8C25EA4FB1700A91D9 /* Debug */,
-				6F7D0F16BB68B743C89E5EA783551725 /* Release */,
+				A7314996783A9B24A8AEFE3B1DA522D9 /* Debug */,
+				8C1D0273424A4365A35B2001CEE72D70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -741,8 +779,8 @@
 		50B1E88D2D83EA66E1991B9E307A8350 /* Build configuration list for PBXNativeTarget "Pods-SwiftI18n_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E44571F0A4B7C0597AEFF6EB5D79AEBD /* Debug */,
-				0C49CC403FE4D193352F6F83A1B0AA38 /* Release */,
+				47616F253C58A7DC49E61198F2364451 /* Debug */,
+				921E883C00557AD816D0F3CA07FF1371 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

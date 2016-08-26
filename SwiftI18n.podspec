@@ -22,14 +22,13 @@ Pod::Spec.new do |s|
                        DESC
 
   s.subspec "I18n" do  |spec|
-    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/View/**/*']
+    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainViews}/**/*']
     spec.source_files = source_files
   end
 
   s.subspec "I18n+Case" do  |spec|
     source_files = ['SwiftI18n/Classes/**/*']
     spec.source_files = source_files
-    spec.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => "-D CASE" }
   end
 
 end
