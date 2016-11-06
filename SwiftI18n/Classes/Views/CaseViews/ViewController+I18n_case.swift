@@ -20,11 +20,11 @@ extension UIViewController: I18n {
         
         set(newValue) {
             loc_keysDictionary[UIViewController.case_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
     }
     
-    func loc_localeDidChanged() {
+    func loc_localeDidChange() {
         guard let title = loc_keysDictionary[UIViewController.loc_titleKey]?.localised else {return}
         let caseTransform = loc_keysDictionary[UIViewController.case_titleKey]
         self.title = title.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))

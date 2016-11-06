@@ -20,7 +20,7 @@ public extension UIViewController {
         
         set(newValue) {
             loc_keysDictionary[UIViewController.loc_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
         
     }

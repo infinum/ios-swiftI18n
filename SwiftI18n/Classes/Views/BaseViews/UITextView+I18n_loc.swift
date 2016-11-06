@@ -20,7 +20,7 @@ extension UITextView {
         
         set(newValue) {
             loc_keysDictionary[UITextView.loc_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
         
     }

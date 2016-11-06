@@ -21,7 +21,7 @@ extension UITextField: I18n {
         
         set(newValue) {
             loc_keysDictionary[UITextField.case_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
     }
     
@@ -33,11 +33,11 @@ extension UITextField: I18n {
         
         set(newValue) {
             loc_keysDictionary[UITextField.case_placeholderKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
     }
     
-    func loc_localeDidChanged() {
+    func loc_localeDidChange() {
         let text = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
         let placeholder = loc_keysDictionary[UITextField.loc_titleKey]?.localised
         

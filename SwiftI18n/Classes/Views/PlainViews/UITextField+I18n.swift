@@ -10,7 +10,7 @@ import UIKit
 
 extension UITextField: I18n {
     
-    func loc_localeDidChanged() {
+    func loc_localeDidChange() {
         let text = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
         let placeholder = loc_keysDictionary[UITextField.loc_titleKey]?.localised
         

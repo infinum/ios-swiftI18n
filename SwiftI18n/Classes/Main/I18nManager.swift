@@ -14,7 +14,7 @@ public class I18nManager {
     
     private init() {}
     
-    public var defoultLanguage: String?
+    public var defaultLanguage: String?
     
     private var _availableLanguages: [String]?
     public var availableLanguages: [String] {
@@ -41,19 +41,19 @@ public class I18nManager {
             if let language = _language {
                 return language
             }
-            _language = UserDefaults.standard.string(forKey: .langauge)
+            _language = UserDefaults.standard.string(forKey: .language)
             if let language = _language {
                 return language
             }
-            if let defoultLanguage = defoultLanguage {
-                return defoultLanguage
+            if let defaultLanguage = defaultLanguage {
+                return defaultLanguage
             }
             return Bundle.preferredLocalizations(from: availableLanguages).first ?? "en"
         }
         
         set(newValue) {
             _language = newValue
-            UserDefaults.standard.set(newValue, forKey: .langauge)
+            UserDefaults.standard.set(newValue, forKey: .language)
             UserDefaults.standard.set([newValue], forKey: .appleLanguages)
         }
     }
@@ -62,7 +62,7 @@ public class I18nManager {
 public extension I18nManager {
     
     public static func subscribeForLocaleDidChange(block: @escaping ()->()) {
-        NotificationCenter.default.addObserver(forName: NSNotification.loc_LanguageDidChangedNotification, object: nil, queue: OperationQueue.main) { _ in
+        NotificationCenter.default.addObserver(forName: NSNotification.loc_LanguageDidChangeNotification, object: nil, queue: OperationQueue.main) { _ in
             block()
         }
     }
@@ -72,8 +72,8 @@ public extension I18nManager {
     
     public func localizedString(forKey key: String) -> String {
         let value = NSLocalizedString(key, tableName: language, comment: "")
-        if value == key && defoultLanguage != nil {
-            return NSLocalizedString(key, tableName: defoultLanguage, comment: "")
+        if value == key && defaultLanguage != nil {
+            return NSLocalizedString(key, tableName: defaultLanguage, comment: "")
         }
         return value
     }
@@ -86,7 +86,7 @@ public extension I18nManager {
 fileprivate extension I18nManager {
     
     enum I18nUserDefaultKey: String {
-        case langauge
+        case language
         case appleLanguages
     }
     

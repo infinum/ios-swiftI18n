@@ -20,11 +20,11 @@ extension UILabel: I18n {
         
         set(newValue) {
             loc_keysDictionary[UILabel.case_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
     }
     
-    func loc_localeDidChanged() {
+    func loc_localeDidChange() {
         guard let text = loc_keysDictionary[UILabel.loc_titleKey]?.localised else {return}
         let caseTransform = loc_keysDictionary[UILabel.case_titleKey]
         self.text = text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))

@@ -21,7 +21,7 @@ public extension UITextField {
         
         set(newValue) {
             loc_keysDictionary[UITextField.loc_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
         
     }
@@ -34,7 +34,7 @@ public extension UITextField {
         
         set(newValue) {
             loc_keysDictionary[UITextField.loc_placeholderKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
         
     }

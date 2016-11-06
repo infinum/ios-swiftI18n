@@ -10,11 +10,11 @@ import UIKit
 
 extension UIButton: I18n {
     
-    func loc_localeDidChanged() {
-        loc_allStates.forEach { loc_localeDidChanged(for: $0) }
+    func loc_localeDidChange() {
+        loc_allStates.forEach { loc_localeDidChange(for: $0) }
     }
     
-    func loc_localeDidChanged(`for` state: UIControlState) {
+    func loc_localeDidChange(`for` state: UIControlState) {
         guard let text = loc_keysDictionary[state]?.localised  else {return}
         setTitle(text, for: state)
     }

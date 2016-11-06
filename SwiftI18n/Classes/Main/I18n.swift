@@ -9,7 +9,7 @@
 import UIKit
 
 protocol I18n: class {
-    func loc_localeDidChanged()
+    func loc_localeDidChange()
 }
 
 private struct AssociatedKeys {
@@ -25,7 +25,7 @@ extension I18n {
         let keysDictionary = KeysDictionary()
         objc_setAssociatedObject(self, &AssociatedKeys.keysDictionary, keysDictionary, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         I18nManager.subscribeForLocaleDidChange { [weak self] in
-            self?.loc_localeDidChanged()
+            self?.loc_localeDidChange()
         }
         return keysDictionary
     }

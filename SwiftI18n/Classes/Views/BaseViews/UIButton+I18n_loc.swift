@@ -27,7 +27,7 @@ public extension UIButton {
         
         set(newValue) {
             loc_allStates.forEach { setLocTitleKey(newValue, for: $0) }
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
         
     }

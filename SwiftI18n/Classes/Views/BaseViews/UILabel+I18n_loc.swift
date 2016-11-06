@@ -20,7 +20,7 @@ public extension UILabel {
         
         set(newValue) {
             loc_keysDictionary[UILabel.loc_titleKey] = newValue
-            loc_localeDidChanged()
+            loc_localeDidChange()
         }
         
     }
