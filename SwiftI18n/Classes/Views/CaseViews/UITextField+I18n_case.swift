@@ -38,8 +38,8 @@ extension UITextField: I18n {
     }
     
     func loc_localeDidChange() {
-        let text = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
-        let placeholder = loc_keysDictionary[UITextField.loc_titleKey]?.localised
+        let text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
+        let placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
         
         if let text = text {
             let caseTransform = loc_keysDictionary[UITextField.case_titleKey]
@@ -48,7 +48,7 @@ extension UITextField: I18n {
         
         if let placeholder = placeholder {
             let casePlaceholderTransform = loc_keysDictionary[UITextField.case_placeholderKey]
-            self.placeholder = placeholder.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+            self.placeholder = placeholder.transform(with: I18nCaseTransform(rawValue: casePlaceholderTransform ?? ""))
         }
         
     }

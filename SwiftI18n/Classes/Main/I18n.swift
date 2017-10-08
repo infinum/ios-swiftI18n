@@ -14,6 +14,7 @@ protocol I18n: class {
 
 private struct AssociatedKeys {
     static var keysDictionary = "loc_keysDictionary"
+    static var disposable = "loc_disposable"
 }
 
 extension I18n {
@@ -24,12 +25,13 @@ extension I18n {
         }
         let keysDictionary = KeysDictionary()
         objc_setAssociatedObject(self, &AssociatedKeys.keysDictionary, keysDictionary, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        I18nManager.subscribeForLocaleDidChange { [weak self] in
-            self?.loc_localeDidChange()
-        }
+        
+        let observable = I18nManager.subscribeForLocaleDidChange { [weak self] in self?.loc_localeDidChange() }
+        let disposable = LocDisposable { NotificationCenter.default.removeObserver(observable) }
+        objc_setAssociatedObject(self, &AssociatedKeys.disposable, disposable, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        
         return keysDictionary
     }
-    
 }
 
 class KeysDictionary {
@@ -46,4 +48,17 @@ class KeysDictionary {
         }
     }
     
+}
+
+fileprivate class LocDisposable {
+    
+    let block: ()->()
+    
+    init(block: @escaping ()->()) {
+        self.block = block
+    }
+    
+    deinit {
+        block()
+    }
 }

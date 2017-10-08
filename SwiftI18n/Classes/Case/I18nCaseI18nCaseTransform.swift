@@ -24,16 +24,13 @@ public enum I18nCaseTransform: String {
             return string.capitalized(with: Locale(identifier: I18nManager.instance.language))
         }
     }
-    
 }
 
 extension String {
     
     func transform(with caseTransform: I18nCaseTransform?) -> String {
-        if let caseTransform = caseTransform {
-            return caseTransform.transform(string: self)
-        }
-        return self
+        guard let caseTransform = caseTransform else { return self }
+        return caseTransform.transform(string: self)
     }
     
 }

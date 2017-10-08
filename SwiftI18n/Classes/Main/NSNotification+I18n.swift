@@ -8,8 +8,8 @@
 
 import UIKit
 
-public extension NSNotification {
+public extension NSNotification.Name {
     
-    @nonobjc public static let loc_LanguageDidChangeNotification = Name("loc_LanguageDidChangeNotification")
+    public static let loc_LanguageDidChangeNotification = NSNotification.Name("loc_LanguageDidChangeNotification")
     
 }
