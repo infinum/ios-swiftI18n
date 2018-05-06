@@ -38,7 +38,8 @@ protocol LocKeyAcceptable {
 
 extension LocKeyAcceptable {
     var loc: Localizable<Self> {
-        return Localizable(base: self)
+        get { return Localizable(base: self) }
+        set {}
     }
 }
 
