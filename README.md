@@ -25,6 +25,94 @@ pod 'SwiftI18n/I18n'
 pod 'SwiftI18n/I18n+Case'
 ```
 
+## Usage
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+Add:
+```Swift
+import SwiftI18n
+```
+
+Set user selected language to, read currnet language from:
+```Swift
+I18nManager.instance.language
+```
+
+Set language, default language, ...:
+```Swift
+I18nManager.instance.availableLanguages = ["en_US", "hr"]
+I18nManager.instance.defaultLanguage = "hr"
+```
+If `availableLanguages` are present, and `defaultLanguage` isn't `langauge` is initialy set to language most preferable by the user from `availableLanguages`.
+
+Handling language change:
+Subscribe to `I18nManager.subscribeForLocaleDidChange(block: { ... } -> -> NSObjectProtocol`
+or if you prefere notifications, you can use:
+`NSNotification.Name.loc_LanguageDidChangeNotification`
+
+### Where fun really starts
+
+```Swift
+someLabel.locTitleKey = "some_key"
+```
+Now when language changes, your `someLabel`'s title automaticly changes.
+Isn't that great.
+
+Supported elements:
+```UILabel ```
+```UIButton ```
+```UITextFiled ```
+```UITextView ```
+```UIViewController ```
+```UIBarButtonItem ```
+```UITabBarItem ```
+```UINavigationItem ```
+
+**And the most important thing all of those `locTitleKey`'s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
+
+### Handling cases
+
+Sometimes you have to work with transations that are all lowercased, but you want them to be uppercased or maybe capitalized.
+To handle this use:
+```ruby
+pod 'SwiftI18n/I18n+Case'
+```
+
+Now you have an enum:
+```Swift
+enum I18nCaseTransform: String {
+    case uppercased = "up"
+    case lowercased = "low"
+    case capitalized = "cap"
+}
+```
+which you can use like this:
+```Swift
+someButton.setCaseTransform(.uppercased, for: .normal)
+```
+You can also set case transform in ```Storyboards ```.
+
+### Working with Polyglot client Strings enum
+
+For SwiftI18n to work beautifly with polyglot client created `Strings` enum you will need to copy:
+`SwiftI18n/Polyglot/PolyglotSwiftI18Extensions.swift`
+into your project.
+
+By doing this you can now set transaltions tou your UI elements with with a lot of ease:
+```Swift
+someLabe.loc.titleKey = .somePolygotKey
+```
+
+## Not supported 
+
+```
+Attributed strings
+```
+Sy :(
+
+
+
 ## Author
 
 Vlaho Poluta, vlaho.poluta@infinum.hr
