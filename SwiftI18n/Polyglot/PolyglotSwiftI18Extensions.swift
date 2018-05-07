@@ -37,15 +37,6 @@ extension Localizable {
     
 }
 
-extension UIBarButtonItem: LocKeyAcceptable {}
-extension UILabel: LocKeyAcceptable {}
-extension UINavigationItem: LocKeyAcceptable {}
-extension UITabBarItem: LocKeyAcceptable {}
-extension UITextView: LocKeyAcceptable {}
-extension UIButton: LocKeyAcceptable {}
-extension UITextField: LocKeyAcceptable {}
-extension UIViewController: LocKeyAcceptable {}
-
 extension Localizable where Base: UIButton {
     
     func titleKey(for state: UIControlState) -> Strings? {

@@ -22,3 +22,11 @@ public extension LocKeyAcceptable {
     }
 }
 
+extension UIBarButtonItem: LocKeyAcceptable {}
+extension UILabel: LocKeyAcceptable {}
+extension UINavigationItem: LocKeyAcceptable {}
+extension UITabBarItem: LocKeyAcceptable {}
+extension UITextView: LocKeyAcceptable {}
+extension UIButton: LocKeyAcceptable {}
+extension UITextField: LocKeyAcceptable {}
+extension UIViewController: LocKeyAcceptable {}
