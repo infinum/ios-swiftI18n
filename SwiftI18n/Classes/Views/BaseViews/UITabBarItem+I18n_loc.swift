@@ -9,7 +9,7 @@ import UIKit
 
 public extension UITabBarItem {
     
-    @nonobjc static let loc_titleKey = "KEY"
+    static let loc_titleKey = "KEY"
     
     @IBInspectable public var locTitleKey: String? {
         

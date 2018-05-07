@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
-    @nonobjc static let loc_titleKey = "KEY"
+    static let loc_titleKey = "KEY"
     
     @IBInspectable public var locTitleKey: String? {
         

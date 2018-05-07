@@ -10,8 +10,8 @@ import UIKit
 
 public extension UITextField {
     
-    @nonobjc static let loc_titleKey = "KEY"
-    @nonobjc static let loc_placeholderKey = "PKEY"
+    static let loc_titleKey = "KEY"
+    static let loc_placeholderKey = "PKEY"
     
     @IBInspectable public var locTitleKey: String? {
         

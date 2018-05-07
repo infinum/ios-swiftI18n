@@ -28,21 +28,6 @@ extension Language: Equatable {
     
 }
 
-struct Localizable<Base: LocKeyAcceptable> {
-    var base: Base
-}
-
-protocol LocKeyAcceptable {
-    var locTitleKey: String? { get set }
-}
-
-extension LocKeyAcceptable {
-    var loc: Localizable<Self> {
-        get { return Localizable(base: self) }
-        set {}
-    }
-}
-
 extension Localizable {
     
     var titleKey: Strings? {

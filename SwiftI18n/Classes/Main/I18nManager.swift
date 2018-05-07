@@ -15,28 +15,19 @@ public class I18nManager {
     private init() {}
     
     public var defaultLanguage: String?
+    public var availableLanguages: [String]?
     
-    private var _availableLanguages: [String]?
-    public var availableLanguages: [String] {
-        get {
-            if let availableLanguages = _availableLanguages {
-                return availableLanguages
-            }
-            let pathsToStrings = Bundle.urls(forResourcesWithExtension: "strings", subdirectory: nil, in: Bundle.main.bundleURL) ?? []
-            let availableLanguages = pathsToStrings.flatMap({ (url) -> String? in
-                return url.lastPathComponent.components(separatedBy: ".").first
-            })
-            self._availableLanguages = availableLanguages
-            return availableLanguages
-        }
-        
-        set(newValue) {
-            _availableLanguages = newValue
-        }
+    public var localizationPerformingBlock: (_ key: String, _ language: String)->(String) = { (key, language) in
+        return NSLocalizedString(key, tableName: language, comment: "")
     }
     
     private var _language: String?
     public var language: String {
+        set(newValue) {
+            _language = newValue
+            UserDefaults.standard.set(newValue, forKey: .language)
+            UserDefaults.standard.set([newValue], forKey: .appleLanguages)
+        }
         get {
             if let language = _language {
                 return language
@@ -48,20 +39,15 @@ public class I18nManager {
             if let defaultLanguage = defaultLanguage {
                 return defaultLanguage
             }
-            return Bundle.preferredLocalizations(from: availableLanguages).first ?? "en"
-        }
-        
-        set(newValue) {
-            _language = newValue
-            UserDefaults.standard.set(newValue, forKey: .language)
-            UserDefaults.standard.set([newValue], forKey: .appleLanguages)
+            return availableLanguages
+                .flatMap { return Bundle.preferredLocalizations(from: $0).first }
+                ?? "en"
         }
     }
 }
 
 public extension I18nManager {
     
-    @discardableResult
     public static func subscribeForLocaleDidChange(block: @escaping ()->()) -> NSObjectProtocol {
         return NotificationCenter.default.addObserver(forName: .loc_LanguageDidChangeNotification, object: nil, queue: OperationQueue.main) { _ in
             block()
@@ -72,7 +58,7 @@ public extension I18nManager {
 public extension I18nManager {
     
     public func localizedString(forKey key: String) -> String {
-        return NSLocalizedString(key, tableName: language, comment: "")
+        return localizationPerformingBlock(key, language)
     }
     
     subscript(locKey: String) -> String {
