@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Localizable<Base: LocKeyAcceptable> {
+public struct Localizable<Base: LocKeyAcceptable> {
     var base: Base
 }
 
-protocol LocKeyAcceptable {
+public protocol LocKeyAcceptable {
     var locTitleKey: String? { get set }
 }
 
-extension LocKeyAcceptable {
+public extension LocKeyAcceptable {
     var loc: Localizable<Self> {
         get { return Localizable(base: self) }
         set {}
