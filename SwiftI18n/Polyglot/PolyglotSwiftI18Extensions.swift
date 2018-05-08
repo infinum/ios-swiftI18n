@@ -1,9 +1,9 @@
 //
-//  PolyglotSwiftI18Extensions.swift
-//  RBANative
+//  I18n.swift
+//  SwiftI18n
 //
-//  Created by Vlaho Poluta on 06/05/2018.
-//  Copyright © 2018 RBANative. All rights reserved.
+//  Created by Vlaho Poluta on 17/04/18.
+//  Copyright © 2016 Infinum. All rights reserved.
 //
 
 import UIKit

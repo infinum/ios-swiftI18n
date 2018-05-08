@@ -1,22 +1,23 @@
 //
-//  Localizable.swift
-//  Pods-SwiftI18n_Example
+//  I18n.swift
+//  SwiftI18n
 //
-//  Created by Vlaho Poluta on 07/05/2018.
+//  Created by Vlaho Poluta on 17/04/18.
+//  Copyright © 2016 Infinum. All rights reserved.
 //
 
 import Foundation
 
 public struct Localizable<Base: LocKeyAcceptable> {
-    var base: Base
+    public var base: Base
 }
 
-public protocol LocKeyAcceptable {
+public protocol LocKeyAcceptable: class {
     var locTitleKey: String? { get set }
 }
 
 public extension LocKeyAcceptable {
-    var loc: Localizable<Self> {
+    public var loc: Localizable<Self> {
         get { return Localizable(base: self) }
         set {}
     }

@@ -1,8 +1,9 @@
 //
-//  I18nCaseTransformable.swift
-//  Pods-SwiftI18n_Example
+//  I18n.swift
+//  SwiftI18n
 //
-//  Created by Vlaho Poluta on 07/05/2018.
+//  Created by Vlaho Poluta on 17/04/18.
+//  Copyright © 2016 Infinum. All rights reserved.
 //
 
 import UIKit
