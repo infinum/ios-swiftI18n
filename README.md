@@ -34,21 +34,21 @@ Add:
 import SwiftI18n
 ```
 
-Set user selected language to, read currnet language from:
+Set or get currently selected language from:
 ```Swift
 I18nManager.instance.language
 ```
 
-Set language, default language, ...:
+Set available languages and default language:
 ```Swift
 I18nManager.instance.availableLanguages = ["en_US", "hr"]
 I18nManager.instance.defaultLanguage = "hr"
 ```
-If `availableLanguages` are present, and `defaultLanguage` isn't `langauge` is initialy set to language most preferable by the user from `availableLanguages`.
+If `availableLanguages` are present, and `defaultLanguage` isn't, `language` is initialy set to language most preferable by the user from `availableLanguages`.
 
 Handling language change:
 Subscribe to `I18nManager.subscribeForLocaleDidChange(block: { ... } -> -> NSObjectProtocol`
-or if you prefere notifications, you can use:
+or if you prefer notifications, you can use:
 `NSNotification.Name.loc_LanguageDidChangeNotification`
 
 ### Where fun really starts
@@ -56,8 +56,7 @@ or if you prefere notifications, you can use:
 ```Swift
 someLabel.locTitleKey = "some_key"
 ```
-Now when language changes, your `someLabel`'s title automaticly changes.
-Isn't that great.
+Now when language changes, your `someLabel`'s title automaticaly changes. Isn't that great!?
 
 Supported elements:
 ```UILabel ```
@@ -69,11 +68,11 @@ Supported elements:
 ```UITabBarItem ```
 ```UINavigationItem ```
 
-**And the most important thing all of those `locTitleKey`'s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
+**And the most important thing, all of those `locTitleKey`'s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
 
 ### Handling cases
 
-Sometimes you have to work with transations that are all lowercased, but you want them to be uppercased or maybe capitalized.
+Sometimes you have to work with translations that are all lowercased, but you want them to be uppercased or maybe capitalized.
 To handle this use:
 ```ruby
 pod 'SwiftI18n/I18n+Case'
@@ -99,7 +98,7 @@ For SwiftI18n to work beautifly with polyglot client created `Strings` enum you 
 `SwiftI18n/Polyglot/PolyglotSwiftI18Extensions.swift`
 into your project.
 
-By doing this you can now set transaltions tou your UI elements with with a lot of ease:
+By doing this you can now set translations to your UI elements with ease:
 ```Swift
 someLabe.loc.titleKey = .somePolygotKey
 ```
@@ -109,7 +108,7 @@ someLabe.loc.titleKey = .somePolygotKey
 ```
 Attributed strings
 ```
-Sy :(
+Sry :(
 
 
 
