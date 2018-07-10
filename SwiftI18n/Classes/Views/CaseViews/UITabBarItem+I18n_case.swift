@@ -24,7 +24,11 @@ extension UITabBarItem: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UITabBarItem.loc_titleKey]?.localised else {return}
+        guard let title = loc_keysDictionary[UITabBarItem.loc_titleKey]?.localised else {
+            self.title = nil
+            return
+        }
+        
         let caseTransform = loc_keysDictionary[UITabBarItem.case_titleKey]
         self.title = title.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
     }
