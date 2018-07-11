@@ -37,7 +37,11 @@ extension UIButton: I18n {
     }
     
     func loc_localeDidChange(`for` state: UIControlState) {
-        guard let text = loc_keysDictionary[state]?.localised  else {return}
+        guard let text = loc_keysDictionary[state]?.localised else {
+            setTitle(nil, for: state)
+            return
+        }
+        
         let caseTransform = loc_keysDictionary["\(state)\(UIButton.case_titleKey)"]
         setTitle(text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? "")), for: state)
     }

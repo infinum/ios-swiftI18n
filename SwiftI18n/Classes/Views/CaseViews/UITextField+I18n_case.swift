@@ -44,11 +44,15 @@ extension UITextField: I18n {
         if let text = text {
             let caseTransform = loc_keysDictionary[UITextField.case_titleKey]
             self.text = text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        } else {
+            self.text = nil
         }
         
         if let placeholder = placeholder {
             let casePlaceholderTransform = loc_keysDictionary[UITextField.case_placeholderKey]
             self.placeholder = placeholder.transform(with: I18nCaseTransform(rawValue: casePlaceholderTransform ?? ""))
+        } else {
+            self.placeholder = nil
         }
         
     }
