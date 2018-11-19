@@ -41,7 +41,7 @@ public class I18nManager {
                 return defaultLanguage
             }
             return availableLanguages
-                .flatMap { return Bundle.preferredLocalizations(from: $0).first }
+                .flatMap { return Bundle.preferredLocalizations(from: $0, forPreferences: Locale.preferredLanguages).first }
                 ?? "en"
         }
     }
