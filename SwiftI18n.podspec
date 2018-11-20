@@ -8,19 +8,19 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '0.9.5'
-  s.summary          = 'TODO: A short description of SwiftI18n.'
+  s.version          = '1.0.0'
+  s.summary          = 'I18n library for swift'
   s.homepage         = 'https://bitbucket.org/Vlaho/swifti18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Vlaho Poluta' => 'vlaho.poluta@infinum.hr' }
   s.source           = { :git => 'https://Vlaho@bitbucket.org/Vlaho/swifti18n.git', :tag => s.version.to_s }
   s.requires_arc = true
   s.ios.deployment_target = '9.0'
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
   s.default_subspec = 'I18n'
 
   s.description      = <<-DESC
-                        TODO: Add long description of the pod here.
+                        If you are not using Apple's i18n and need to provide language picking in settings in your application, this is the place for you.
                        DESC
 
   s.subspec "I18n" do  |spec|
