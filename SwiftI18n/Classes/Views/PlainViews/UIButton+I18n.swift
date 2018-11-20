@@ -14,7 +14,7 @@ extension UIButton: I18n {
         loc_allStates.forEach { loc_localeDidChange(for: $0) }
     }
     
-    func loc_localeDidChange(`for` state: UIControlState) {
+    func loc_localeDidChange(`for` state: UIControl.State) {
         guard let text = loc_keysDictionary[state]?.localised  else {return}
         setTitle(text, for: state)
     }

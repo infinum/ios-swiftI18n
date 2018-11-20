@@ -9,7 +9,7 @@
 import UIKit
 
 
-extension UIControlState: Hashable {
+extension UIControl.State: Hashable {
     
     public var hashValue: Int {
         return Int(self.rawValue)
@@ -32,15 +32,15 @@ public extension UIButton {
         
     }
     
-    public func setLocTitleKey(_ key: String?, `for` state: UIControlState) {
+    public func setLocTitleKey(_ key: String?, `for` state: UIControl.State) {
         loc_keysDictionary[state] = key
     }
     
-    public func locTitleKey(`for` state: UIControlState) -> String? {
+    public func locTitleKey(`for` state: UIControl.State) -> String? {
         return loc_keysDictionary[state]
     }
     
-    var loc_allStates: [UIControlState] {
+    var loc_allStates: [UIControl.State] {
         return [.normal, .disabled, .highlighted, .selected]
     }
     

@@ -30,11 +30,11 @@ extension UIViewController: I18nCaseTransformable {}
 
 public extension Localizable where Base: UIButton {
  
-    func setCaseTransform(_ key: I18nCaseTransform?, `for` state: UIControlState) {
+    func setCaseTransform(_ key: I18nCaseTransform?, `for` state: UIControl.State) {
         base.setCaseTransform(key, for: state)
     }
     
-    func caseTransform(`for` state: UIControlState) -> I18nCaseTransform? {
+    func caseTransform(`for` state: UIControl.State) -> I18nCaseTransform? {
         return base.caseTransform(for: state)
     }
     

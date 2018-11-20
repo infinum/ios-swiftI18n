@@ -24,11 +24,11 @@ extension UIButton: I18n {
         }
     }
     
-    public func setCaseTransform(_ key: I18nCaseTransform?, `for` state: UIControlState) {
+    public func setCaseTransform(_ key: I18nCaseTransform?, `for` state: UIControl.State) {
         loc_keysDictionary["\(state)\(UIButton.case_titleKey)"] = key?.rawValue
     }
     
-    public func caseTransform(`for` state: UIControlState) -> I18nCaseTransform? {
+    public func caseTransform(`for` state: UIControl.State) -> I18nCaseTransform? {
         return I18nCaseTransform(rawValue: loc_keysDictionary["\(state)\(UIButton.case_titleKey)"] ?? "")
     }
     
@@ -36,7 +36,7 @@ extension UIButton: I18n {
         loc_allStates.forEach { loc_localeDidChange(for: $0) }
     }
     
-    func loc_localeDidChange(`for` state: UIControlState) {
+    func loc_localeDidChange(`for` state: UIControl.State) {
         guard let text = loc_keysDictionary[state]?.localised else {
             setTitle(nil, for: state)
             return

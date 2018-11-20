@@ -39,11 +39,11 @@ extension Localizable {
 
 extension Localizable where Base: UIButton {
     
-    func titleKey(for state: UIControlState) -> Strings? {
+    func titleKey(for state: UIControl.State) -> Strings? {
         return base.locTitleKey(for: state).flatMap { Strings(rawValue: $0) }
     }
     
-    func setTitleKey(_ key: Strings, for state: UIControlState) {
+    func setTitleKey(_ key: Strings, for state: UIControl.State) {
         return base.setLocTitleKey(key.rawValue, for: state)
     }
 }
