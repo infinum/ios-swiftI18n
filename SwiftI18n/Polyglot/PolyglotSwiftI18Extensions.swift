@@ -55,3 +55,11 @@ extension Localizable where Base: UITextField {
         set { base.locPlaceholderKey = newValue?.rawValue }
     }
 }
+
+extension Localizable where Base: UISearchBar {
+    
+    var placeholderKey: Strings? {
+        get { return base.locPlaceholderKey.flatMap { Strings(rawValue: $0) } }
+        set { base.locPlaceholderKey = newValue?.rawValue }
+    }
+}

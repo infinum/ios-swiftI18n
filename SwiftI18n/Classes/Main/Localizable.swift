@@ -31,3 +31,4 @@ extension UITextView: LocKeyAcceptable {}
 extension UIButton: LocKeyAcceptable {}
 extension UITextField: LocKeyAcceptable {}
 extension UIViewController: LocKeyAcceptable {}
+extension UISearchBar: LocKeyAcceptable {}

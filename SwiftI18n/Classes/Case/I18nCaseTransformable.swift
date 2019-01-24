@@ -27,6 +27,7 @@ extension UITextView: I18nCaseTransformable {}
 extension UIButton: I18nCaseTransformable {}
 extension UITextField: I18nCaseTransformable {}
 extension UIViewController: I18nCaseTransformable {}
+extension UISearchBar: I18nCaseTransformable {}
 
 public extension Localizable where Base: UIButton {
  
