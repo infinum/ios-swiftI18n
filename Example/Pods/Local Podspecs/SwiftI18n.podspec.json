@@ -1,7 +1,7 @@
 {
   "name": "SwiftI18n",
-  "version": "0.1.0",
-  "summary": "TODO: A short description of SwiftI18n.",
+  "version": "1.1.0",
+  "summary": "I18n library for swift",
   "homepage": "https://bitbucket.org/Vlaho/swifti18n",
   "license": {
     "type": "MIT",
@@ -11,14 +11,16 @@
     "Vlaho Poluta": "vlaho.poluta@infinum.hr"
   },
   "source": {
-    "git": "git@bitbucket.org:Vlaho/swifti18n.git",
-    "tag": "0.1.0"
+    "git": "https://Vlaho@bitbucket.org/Vlaho/swifti18n.git",
+    "tag": "1.1.0"
   },
   "requires_arc": true,
   "platforms": {
     "ios": "9.0"
   },
-  "description": "TODO: Add long description of the pod here.",
+  "swift_version": "4.2",
+  "default_subspecs": "I18n",
+  "description": "If you are not using Apple's i18n and need to provide language picking in settings in your application, this is the place for you.",
   "subspecs": [
     {
       "name": "I18n",
