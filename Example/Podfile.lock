@@ -1,5 +1,5 @@
 PODS:
-  - "SwiftI18n/I18n+Case (1.1.0)"
+  - "SwiftI18n/I18n+Case (1.2.0)"
 
 DEPENDENCIES:
   - "SwiftI18n/I18n+Case (from `../`)"
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SwiftI18n: 72a2d8892d3ae02d716657884e84d8df14b662b0
+  SwiftI18n: 8ffc6155883a42717583a72b5dfafaeb0a2004d5
 
 PODFILE CHECKSUM: 71c4468e88ce182071e0100ee19c632b2c2fe9ab
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0.beta.3

@@ -1,7 +1,7 @@
 {
   "name": "SwiftI18n",
-  "version": "1.1.0",
-  "summary": "I18n library for swift",
+  "version": "1.2.0",
+  "summary": "I18n library for Swift",
   "homepage": "https://bitbucket.org/Vlaho/swifti18n",
   "license": {
     "type": "MIT",
@@ -12,13 +12,13 @@
   },
   "source": {
     "git": "https://Vlaho@bitbucket.org/Vlaho/swifti18n.git",
-    "tag": "1.1.0"
+    "tag": "1.2.0"
   },
   "requires_arc": true,
   "platforms": {
     "ios": "9.0"
   },
-  "swift_version": "4.2",
+  "swift_versions": "5.0",
   "default_subspecs": "I18n",
   "description": "If you are not using Apple's i18n and need to provide language picking in settings in your application, this is the place for you.",
   "subspecs": [

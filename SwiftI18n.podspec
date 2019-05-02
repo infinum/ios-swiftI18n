@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '1.1.0'
-  s.summary          = 'I18n library for swift'
+  s.version          = '1.2.0'
+  s.summary          = 'I18n library for Swift'
   s.homepage         = 'https://bitbucket.org/Vlaho/swifti18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Vlaho Poluta' => 'vlaho.poluta@infinum.hr' }
   s.source           = { :git => 'https://Vlaho@bitbucket.org/Vlaho/swifti18n.git', :tag => s.version.to_s }
   s.requires_arc = true
   s.ios.deployment_target = '9.0'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
   s.default_subspec = 'I18n'
 
   s.description      = <<-DESC
