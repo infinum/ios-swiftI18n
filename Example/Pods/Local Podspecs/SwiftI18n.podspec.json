@@ -2,7 +2,7 @@
   "name": "SwiftI18n",
   "version": "1.2.0",
   "summary": "I18n library for Swift",
-  "homepage": "https://bitbucket.org/Vlaho/swifti18n",
+  "homepage": "https://github.com/infinum/iOS-SwiftI18n",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -11,7 +11,7 @@
     "Vlaho Poluta": "vlaho.poluta@infinum.hr"
   },
   "source": {
-    "git": "https://Vlaho@bitbucket.org/Vlaho/swifti18n.git",
+    "git": "https://github.com/infinum/iOS-SwiftI18n.git",
     "tag": "1.2.0"
   },
   "requires_arc": true,
