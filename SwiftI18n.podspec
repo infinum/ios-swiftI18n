@@ -8,21 +8,22 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '1.1.0'
-  s.summary          = 'I18n library for swift'
-  s.homepage         = 'https://bitbucket.org/Vlaho/swifti18n'
+  s.version          = '1.2.0'
+  s.summary          = 'I18n library for Swift'
+  s.homepage         = 'https://github.com/infinum/iOS-SwiftI18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Vlaho Poluta' => 'vlaho.poluta@infinum.hr' }
-  s.source           = { :git => 'https://Vlaho@bitbucket.org/Vlaho/swifti18n.git', :tag => s.version.to_s }
-  s.requires_arc = true
-  s.ios.deployment_target = '9.0'
-  s.swift_version = '4.2'
-  s.default_subspec = 'I18n'
-
+  s.source           = { :git => 'https://github.com/infinum/iOS-SwiftI18n.git', :tag => s.version.to_s }
+  
   s.description      = <<-DESC
                         If you are not using Apple's i18n and need to provide language picking in settings in your application, this is the place for you.
                        DESC
-
+  
+  s.requires_arc = true
+  s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
+  
+  s.default_subspec = 'I18n'
   s.subspec "I18n" do  |spec|
     source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainViews}/**/*']
     spec.source_files = source_files
