@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Localizable<Base: LocKeyAcceptable> {
     public var base: Base
