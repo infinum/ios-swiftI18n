@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
   name: "SwiftI18n",
   platforms: [
-    .iOS(.v11)
+    .iOS(.v13)
   ],
   products: [
   // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -23,7 +23,7 @@ let package = Package(
         name: "I18n",
         path: "SwiftI18n",
         exclude: ["Polyglot/PolyglotSwiftI18Extensions.swift"],
-        sources: ["./Classes/Main/", "./Classes/Case/", "./Classes/Views/BaseViews/", "./Classes/Views/CaseViews/"]
+        sources: ["./Classes/Main/", "./Classes/Case/", "./Classes/Views/BaseViews/", "./Classes/Views/CaseViews/", "./Classes/Views/SwiftUI/"]
     )
   ]
 )
