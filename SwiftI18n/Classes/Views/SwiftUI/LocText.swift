@@ -21,16 +21,14 @@ public extension EnvironmentValues {
 
 public struct LanguageModifier: ViewModifier {
     
-    @State private var language: String
+    @State private var language = I18nManager.instance.language
     
-    public init(language: String) {
-        self.language = language
-    }
-    
+    public init(){}
+
     public func body(content: Content) -> some View {
         content
             .onReceive(
-                NotificationCenter.default.publisher(for: .loc_LanguageDidChangeNotification)
+                NotificationCenter.default.publisher(for: .loc_LanguageDidChangeNotification).receive(on: DispatchQueue.main)
             ) { _ in
                 language = I18nManager.instance.language
             }
