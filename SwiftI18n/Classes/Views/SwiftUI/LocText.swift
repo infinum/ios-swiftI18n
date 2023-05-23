@@ -37,21 +37,21 @@ public struct LanguageModifier: ViewModifier {
     
 }
 
-public struct LocText<S>: View where S: RawRepresentable, S.RawValue == String {
+public struct LocText: View {
     
-    public let key: S
+    public let key: String
     @Environment(\.language) var language
     
     public var text: Text {
-        Text(I18nManager.instance.localizationPerformingBlock(key.rawValue, language))
+        Text(I18nManager.instance.localizationPerformingBlock(key, language))
     }
     
     public var body: some View { text }
 }
 
-public extension LocText where S: RawRepresentable, S.RawValue == String {
+public extension LocText {
     
-    init(_ key: S) {
+    init(_ key: String) {
         self.key = key
     }
 }
