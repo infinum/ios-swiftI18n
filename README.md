@@ -16,12 +16,24 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+###Cocoapods
+
 SwiftI18n is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftI18n/I18n'
 pod 'SwiftI18n/I18n+Case'
+```
+
+###Swift Package Manager
+
+SwiftI18n is also available through SPM. To install
+it, simply add the following line to your Package.swift file:
+
+```ruby
+.package(url: "git@github.com:infinum/ios-swiftI18n.git", .upToNextMajor(from: "1.3.0"))
+
 ```
 
 ## Usage
