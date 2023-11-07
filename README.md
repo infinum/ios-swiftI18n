@@ -16,7 +16,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-###Cocoapods
+### Cocoapods
 
 SwiftI18n is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -26,7 +26,7 @@ pod 'SwiftI18n/I18n'
 pod 'SwiftI18n/I18n+Case'
 ```
 
-###Swift Package Manager
+### Swift Package Manager
 
 SwiftI18n is also available through SPM. To install
 it, simply add the following line to your Package.swift file:
