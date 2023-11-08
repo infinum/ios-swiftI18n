@@ -67,7 +67,7 @@ or if you prefer notifications, you can use:
 
     NSNotification.Name.loc_LanguageDidChangeNotification
 
-### Where fun really starts
+### UIKit Support
 
 ```swift
 someLabel.locTitleKey = "some_key"
@@ -86,6 +86,27 @@ Supported elements:
 ```UINavigationItem ```
 
 **And the most important thing, all of those `locTitleKey`'s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
+
+### SwiftUI Support
+
+Using constructor where key is of String type:
+
+```swift
+LocText("some_key")
+```
+
+#### Integration with Polyglot
+
+Just cp this extension somewhere in your project
+
+```swift
+extension LocText {
+    
+    init(key: Strings) {
+        self.init(key.rawValue)
+    }
+}
+```
 
 ### Handling cases
 
