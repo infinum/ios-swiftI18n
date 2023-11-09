@@ -6,13 +6,13 @@
 //  Copyright © 2016 Infinum. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public struct Localizable<Base: LocKeyAcceptable> {
     public var base: Base
 }
 
-public protocol LocKeyAcceptable: class {
+public protocol LocKeyAcceptable: AnyObject {
     var locTitleKey: String? { get set }
 }
 

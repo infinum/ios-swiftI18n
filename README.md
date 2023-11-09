@@ -16,12 +16,24 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### Cocoapods
+
 SwiftI18n is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftI18n/I18n'
 pod 'SwiftI18n/I18n+Case'
+```
+
+### Swift Package Manager
+
+SwiftI18n is also available through SPM. To install
+it, simply add the following line to your Package.swift file:
+
+```ruby
+.package(url: "git@github.com:infinum/ios-swiftI18n.git", .upToNextMajor(from: "1.3.0"))
+
 ```
 
 ## Usage
@@ -55,7 +67,7 @@ or if you prefer notifications, you can use:
 
     NSNotification.Name.loc_LanguageDidChangeNotification
 
-### Where fun really starts
+### UIKit Support
 
 ```swift
 someLabel.locTitleKey = "some_key"
@@ -74,6 +86,27 @@ Supported elements:
 ```UINavigationItem ```
 
 **And the most important thing, all of those `locTitleKey`'s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
+
+### SwiftUI Support
+
+Using constructor where key is of String type:
+
+```swift
+LocText("some_key")
+```
+
+#### Integration with Polyglot
+
+Just cp this extension somewhere in your project
+
+```swift
+extension LocText {
+    
+    init(key: Strings) {
+        self.init(key.rawValue)
+    }
+}
+```
 
 ### Handling cases
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '1.2.1'
+  s.version          = '1.3.0'
   s.summary          = 'I18n library for Swift'
   s.homepage         = 'https://github.com/infinum/ios-swiftI18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -20,17 +20,17 @@ Pod::Spec.new do |s|
                        DESC
   
   s.requires_arc = true
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   
   s.default_subspec = 'I18n'
   s.subspec "I18n" do  |spec|
-    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainViews}/**/*']
+    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainView,SwiftUI}/**/*']
     spec.source_files = source_files
   end
 
   s.subspec "I18n+Case" do  |spec|
-    source_files = ['SwiftI18n/Classes/{Main,Case}/**/*', 'SwiftI18n/Classes/Views/{BaseViews,CaseViews}/**/*']
+    source_files = ['SwiftI18n/Classes/{Main,Case}/**/*', 'SwiftI18n/Classes/Views/{BaseViews,CaseViews,SwiftUI}/**/*']
     spec.source_files = source_files
   end
 
