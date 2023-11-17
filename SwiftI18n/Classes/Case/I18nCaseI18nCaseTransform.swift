@@ -13,6 +13,7 @@ public enum I18nCaseTransform: String {
     case uppercased = "up"
     case lowercased = "low"
     case capitalized = "cap"
+    case firstCapitalized = "firstCap"
     
     func transform(string: String) -> String {
         switch self {
@@ -22,6 +23,8 @@ public enum I18nCaseTransform: String {
             return string.lowercased()
         case .capitalized:
             return string.capitalized(with: Locale(identifier: I18nManager.instance.language))
+        case .firstCapitalized:
+            return String(string.uppercased().prefix(1) + string.lowercased().dropFirst())
         }
     }
 }

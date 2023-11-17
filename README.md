@@ -124,6 +124,7 @@ enum I18nCaseTransform: String {
     case uppercased = "up"
     case lowercased = "low"
     case capitalized = "cap"
+    case firstCapitalized = "firstCap"
 }
 ```
 
