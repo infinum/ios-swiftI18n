@@ -39,54 +39,48 @@ public struct LanguageModifier: ViewModifier {
 
 public struct LocText: View {
 
-    fileprivate let content: [Content]
+    var content: [LocTextContent]
     @Environment(\.language) private var language
 
-    public var text: Text {
+    public var body: some View {
         content
             .map { $0.text(localizedIn: language) }
             .reduce(Text(""), +)
     }
-    
-    public var body: some View { text }
 }
 
-private extension LocText {
+struct LocTextContent {
+    let key: LocTextContentKey
+    var modifiers: [(Text) -> Text]
 
-    enum Content {
-        case key(String)
-        case text(Text)
+    func text(localizedIn language: String) -> Text {
+        modifiers.reduce(key.text(localizedIn: language)) { text, modifier in modifier(text) }
+    }
 
-        func text(localizedIn language: String) -> Text {
-            switch self {
-            case .key(let key):
-                Text(I18nManager.instance.localizationPerformingBlock(key, language))
-            case .text(let text):
-                text
-            }
-        }
+    static func text(_ text: Text) -> Self {
+        LocTextContent(key: .text(text), modifiers: [])
+    }
+
+    static func key(_ key: String) -> Self {
+        LocTextContent(key: .key(key), modifiers: [])
     }
 }
 
+enum LocTextContentKey {
+    case key(String)
+    case text(Text)
+
+    func text(localizedIn language: String) -> Text {
+        switch self {
+        case .key(let key): Text(I18nManager.instance.localizationPerformingBlock(key, language))
+        case .text(let text):  text
+        }
+    }
+}
 
 public extension LocText {
     
     init(_ key: String) {
         self.content = [.key(key)]
-    }
-}
-
-public extension LocText {
-    
-    static func + (lhs: LocText, rhs: LocText) -> LocText {
-        LocText(content: lhs.content + rhs.content)
-    }
-
-    static func + (lhs: Text, rhs: LocText) -> LocText {
-        LocText(content: [.text(lhs)] + rhs.content)
-    }
-
-    static func + (lhs: LocText, rhs: Text) -> LocText {
-        LocText(content: lhs.content + [.text(rhs)])
     }
 }
