@@ -8,14 +8,22 @@
 import SwiftUI
 
 // MARK: - Applying a custom Text modifier
+extension LocTextContent {
+
+    func modifier(_ modifier: @escaping (Text) -> Text) -> Self {
+        switch self {
+        case .key(let string, let modifiers):
+            return .key(string, modifiers: modifiers + [modifier])
+        case .text(let text):
+            return .text(modifier(text))
+        }
+    }
+}
+
 public extension LocText {
 
-    func withModifier(_ modifier: @escaping (Text) -> Text) -> Self {
-        var mutable = self
-        for index in mutable.content.indices {
-            mutable.content[index].modifiers.append(modifier)
-        }
-        return mutable
+    func modifier(_ modifier: @escaping (Text) -> Text) -> Self {
+        LocText(content: content.map { $0.modifier(modifier) })
     }
 }
 
@@ -23,21 +31,21 @@ public extension LocText {
 public extension LocText {
 
     func font(_ font: Font?) -> LocText {
-        withModifier { $0.font(font) }
+        modifier { $0.font(font) }
     }
 
     func fontWeight(_ weight: Font.Weight?) -> LocText {
-        withModifier { $0.fontWeight(weight) }
+        modifier { $0.fontWeight(weight) }
     }
 
     @available(iOS 16.1, *)
     func fontDesign(_ design: Font.Design?) -> LocText {
-        withModifier { $0.fontDesign(design) }
+        modifier { $0.fontDesign(design) }
     }
 
     @available(iOS 16.0, *)
     func fontWidth(_ width: Font.Width?) -> LocText {
-        withModifier { $0.fontWidth(width) }
+        modifier { $0.fontWidth(width) }
     }
 }
 
@@ -46,32 +54,32 @@ public extension LocText {
 
     @available(iOS 17.0, *)
     func foregroundStyle<S>(_ style: S) -> LocText where S : ShapeStyle {
-        withModifier { $0.foregroundStyle(style) }
+        modifier { $0.foregroundStyle(style) }
     }
 
     func bold() -> LocText {
-        withModifier { $0.bold() }
+        modifier { $0.bold() }
     }
 
     @available(iOS 16.0, *)
     func bold(_ isActive: Bool) -> LocText {
-        withModifier { $0.bold(isActive) }
+        modifier { $0.bold(isActive) }
     }
 
     func italic() -> LocText {
-        withModifier { $0.italic() }
+        modifier { $0.italic() }
     }
 
     @available(iOS 16.0, *)
     func italic(_ isActive: Bool) -> LocText {
-        withModifier { $0.italic(isActive) }
+        modifier { $0.italic(isActive) }
     }
 
     func strikethrough(
         _ isActive: Bool = true,
         color: Color? = nil
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.strikethrough(
                 isActive,
                 color: color
@@ -85,7 +93,7 @@ public extension LocText {
         pattern: Text.LineStyle.Pattern,
         color: Color? = nil
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.strikethrough(
                 isActive,
                 pattern: pattern,
@@ -98,7 +106,7 @@ public extension LocText {
         _ isActive: Bool = true,
         color: Color? = nil
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.underline(
                 isActive,
                 color: color
@@ -112,7 +120,7 @@ public extension LocText {
         pattern: Text.LineStyle.Pattern,
         color: Color? = nil
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.underline(
                 isActive,
                 pattern: pattern,
@@ -123,25 +131,25 @@ public extension LocText {
 
     @available(iOS 16.4, *)
     func monospaced(_ isActive: Bool = true) -> LocText {
-        withModifier { $0.monospaced(isActive) }
+        modifier { $0.monospaced(isActive) }
     }
 
     @available(iOS 15.0, *)
     func monospacedDigit() -> LocText {
-        withModifier { $0.monospacedDigit() }
+        modifier { $0.monospacedDigit() }
     }
 
 
     func kerning(_ kerning: CGFloat) -> LocText {
-        withModifier { $0.kerning(kerning) }
+        modifier { $0.kerning(kerning) }
     }
 
     func tracking(_ tracking: CGFloat) -> LocText {
-        withModifier { $0.tracking(tracking) }
+        modifier { $0.tracking(tracking) }
     }
 
     func baselineOffset(_ baselineOffset: CGFloat) -> LocText {
-        withModifier { $0.baselineOffset(baselineOffset) }
+        modifier { $0.baselineOffset(baselineOffset) }
     }
 }
 
@@ -153,7 +161,7 @@ public extension LocText {
         _ scale: Text.Scale,
         isEnabled: Bool = true
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.textScale(
                 scale,
                 isEnabled: isEnabled
@@ -170,7 +178,7 @@ public extension LocText {
         _ language: TypesettingLanguage,
         isEnabled: Bool = true
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.typesettingLanguage(
                 language,
                 isEnabled: isEnabled
@@ -183,7 +191,7 @@ public extension LocText {
         _ language: Locale.Language,
         isEnabled: Bool = true
     ) -> LocText {
-        withModifier {
+        modifier {
             $0.typesettingLanguage(
                 language,
                 isEnabled: isEnabled
@@ -197,22 +205,22 @@ public extension LocText {
 
     @available(iOS 15.0, *)
     func speechAdjustedPitch(_ value: Double) -> LocText {
-        withModifier { $0.speechAdjustedPitch(value) }
+        modifier { $0.speechAdjustedPitch(value) }
     }
 
     @available(iOS 15.0, *)
     func speechAlwaysIncludesPunctuation(_ value: Bool = true) -> LocText {
-        withModifier { $0.speechAlwaysIncludesPunctuation(value) }
+        modifier { $0.speechAlwaysIncludesPunctuation(value) }
     }
 
     @available(iOS 15.0, *)
     func speechAnnouncementsQueued(_ value: Bool = true) -> LocText {
-        withModifier { $0.speechAnnouncementsQueued(value) }
+        modifier { $0.speechAnnouncementsQueued(value) }
     }
 
     @available(iOS 15.0, *)
     func speechSpellsOutCharacters(_ value: Bool = true) -> LocText {
-        withModifier { $0.speechSpellsOutCharacters(value) }
+        modifier { $0.speechSpellsOutCharacters(value) }
     }
 }
 
@@ -221,27 +229,27 @@ public extension LocText {
 
     @available(iOS 15.0, *)
     func accessibilityHeading(_ level: AccessibilityHeadingLevel) -> LocText {
-        withModifier { $0.accessibilityHeading(level) }
+        modifier { $0.accessibilityHeading(level) }
     }
 
     @available(iOS 15.0, *)
     func accessibilityLabel<S>(_ label: S) -> LocText where S : StringProtocol {
-        withModifier { $0.accessibilityLabel(label) }
+        modifier { $0.accessibilityLabel(label) }
     }
 
     @available(iOS 15.0, *)
     func accessibilityLabel(_ label: Text) -> LocText {
-        withModifier { $0.accessibilityLabel(label) }
+        modifier { $0.accessibilityLabel(label) }
     }
 
     @available(iOS 15.0, *)
     func accessibilityLabel(_ labelKey: LocalizedStringKey) -> LocText {
-        withModifier { $0.accessibilityLabel(labelKey) }
+        modifier { $0.accessibilityLabel(labelKey) }
     }
 
     @available(iOS 15.0, *)
     func accessibilityTextContentType(_ value: AccessibilityTextContentType) -> LocText {
-        withModifier { $0.accessibilityTextContentType(value) }
+        modifier { $0.accessibilityTextContentType(value) }
     }
 }
 
@@ -271,6 +279,6 @@ public extension LocText {
     @available(watchOS, introduced: 6.0, deprecated: 100000.0, renamed: "foregroundStyle(_:)")
     @available(visionOS, introduced: 1.0, deprecated: 100000.0, renamed: "foregroundStyle(_:)")
     func foregroundColor(_ color: Color?) -> LocText {
-        withModifier { $0.foregroundColor(color) }
+        modifier { $0.foregroundColor(color) }
     }
 }

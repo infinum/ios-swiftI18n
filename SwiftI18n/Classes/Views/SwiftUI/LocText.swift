@@ -39,7 +39,7 @@ public struct LanguageModifier: ViewModifier {
 
 public struct LocText: View {
 
-    var content: [LocTextContent]
+    let content: [LocTextContent]
     @Environment(\.language) private var language
 
     public var body: some View {
@@ -49,31 +49,17 @@ public struct LocText: View {
     }
 }
 
-struct LocTextContent {
-    let key: LocTextContentKey
-    var modifiers: [(Text) -> Text]
-
-    func text(localizedIn language: String) -> Text {
-        modifiers.reduce(key.text(localizedIn: language)) { text, modifier in modifier(text) }
-    }
-
-    static func text(_ text: Text) -> Self {
-        LocTextContent(key: .text(text), modifiers: [])
-    }
-
-    static func key(_ key: String) -> Self {
-        LocTextContent(key: .key(key), modifiers: [])
-    }
-}
-
-enum LocTextContentKey {
-    case key(String)
+enum LocTextContent {
+    case key(String, modifiers: [(Text) -> Text])
     case text(Text)
 
     func text(localizedIn language: String) -> Text {
         switch self {
-        case .key(let key): Text(I18nManager.instance.localizationPerformingBlock(key, language))
-        case .text(let text):  text
+        case .key(let key, let modifiers):
+            let text = Text(I18nManager.instance.localizationPerformingBlock(key, language))
+            return modifiers.reduce(text) { text, modifier in modifier(text) }
+        case .text(let text):
+            return text
         }
     }
 }
@@ -81,6 +67,6 @@ enum LocTextContentKey {
 public extension LocText {
     
     init(_ key: String) {
-        self.content = [.key(key)]
+        self.content = [.key(key, modifiers: [])]
     }
 }
