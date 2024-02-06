@@ -39,54 +39,34 @@ public struct LanguageModifier: ViewModifier {
 
 public struct LocText: View {
 
-    fileprivate let content: [Content]
+    let content: [LocTextContent]
     @Environment(\.language) private var language
 
-    public var text: Text {
+    public var body: some View {
         content
             .map { $0.text(localizedIn: language) }
             .reduce(Text(""), +)
     }
-    
-    public var body: some View { text }
 }
 
-private extension LocText {
+enum LocTextContent {
+    case key(String, modifiers: [(Text) -> Text])
+    case text(Text)
 
-    enum Content {
-        case key(String)
-        case text(Text)
-
-        func text(localizedIn language: String) -> Text {
-            switch self {
-            case .key(let key):
-                Text(I18nManager.instance.localizationPerformingBlock(key, language))
-            case .text(let text):
-                text
-            }
+    func text(localizedIn language: String) -> Text {
+        switch self {
+        case .key(let key, let modifiers):
+            let text = Text(I18nManager.instance.localizationPerformingBlock(key, language))
+            return modifiers.reduce(text) { text, modifier in modifier(text) }
+        case .text(let text):
+            return text
         }
     }
 }
 
-
 public extension LocText {
     
     init(_ key: String) {
-        self.content = [.key(key)]
-    }
-}
-
-public extension LocText {
-    
-    static func + (lhs: LocText, rhs: LocText) -> LocText {
-        LocText(content: lhs.content + rhs.content)
-    }
-
-    static func + (lhs: Text, rhs: LocText) -> LocText {
-        LocText(content: [.text(lhs)] + rhs.content)
-    }
-
-    static func + (lhs: LocText, rhs: Text) -> LocText {
-        LocText(content: lhs.content + [.text(rhs)])
+        self.content = [.key(key, modifiers: [])]
     }
 }
