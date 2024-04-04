@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'I18n'
   s.subspec "I18n" do  |spec|
-    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainView,SwiftUI}/**/*']
+    source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainViews,SwiftUI}/**/*']
     spec.source_files = source_files
   end
 
