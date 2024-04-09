@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'I18n library for Swift'
   s.homepage         = 'https://github.com/infinum/ios-swiftI18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
+  s.resource_bundles = { 'SwiftI18n' => ['SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy'] }
   
   s.default_subspec = 'I18n'
   s.subspec "I18n" do  |spec|
