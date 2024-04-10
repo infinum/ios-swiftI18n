@@ -22,17 +22,18 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
-  s.resource_bundles = { 'SwiftI18n' => ['SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy'] }
   
   s.default_subspec = 'I18n'
   s.subspec "I18n" do  |spec|
     source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainViews,SwiftUI}/**/*']
     spec.source_files = source_files
+    spec.resource_bundles = { 'SwiftI18n' => ['SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy'] }
   end
 
   s.subspec "I18n+Case" do  |spec|
     source_files = ['SwiftI18n/Classes/{Main,Case}/**/*', 'SwiftI18n/Classes/Views/{BaseViews,CaseViews,SwiftUI}/**/*']
     spec.source_files = source_files
+    spec.resource_bundles = { 'SwiftI18n' => ['SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy'] }
   end
 
 end
