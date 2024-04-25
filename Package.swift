@@ -22,7 +22,8 @@ let package = Package(
     .target(
         name: "SwiftI18n",
         path: "SwiftI18n",
-        sources: ["./Classes/Main/", "./Classes/Case/", "./Classes/Views/BaseViews/", "./Classes/Views/CaseViews/", "./Classes/Views/SwiftUI/"]
+        sources: ["./Classes/Main/", "./Classes/Case/", "./Classes/Views/BaseViews/", "./Classes/Views/CaseViews/", "./Classes/Views/SwiftUI/"],
+        resources: [.copy("./SupportingFiles/PrivacyInfo.xcprivacy")]
     )
   ]
 )

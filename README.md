@@ -153,6 +153,10 @@ someLabe.loc.titleKey = .somePolygotKey
 Attributed strings
 ```
 
+## Privacy
+
+SwiftI18n does not collect any user data. We have provided a [privacy manifest](https://github.com/infinum/ios-swiftI18n/blob/master/SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy) file that can be included in your app.
+
 ## Author
 
 Vlaho Poluta, vlaho.poluta@infinum.hr

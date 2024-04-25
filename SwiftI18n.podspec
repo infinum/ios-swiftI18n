@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '1.3.0'
+  s.version          = '1.3.1'
   s.summary          = 'I18n library for Swift'
   s.homepage         = 'https://github.com/infinum/ios-swiftI18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -27,11 +27,13 @@ Pod::Spec.new do |s|
   s.subspec "I18n" do  |spec|
     source_files = ['SwiftI18n/Classes/Main/**/*', 'SwiftI18n/Classes/Views/{BaseViews,PlainViews,SwiftUI}/**/*']
     spec.source_files = source_files
+    spec.resource_bundles = { 'SwiftI18n' => ['SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy'] }
   end
 
   s.subspec "I18n+Case" do  |spec|
     source_files = ['SwiftI18n/Classes/{Main,Case}/**/*', 'SwiftI18n/Classes/Views/{BaseViews,CaseViews,SwiftUI}/**/*']
     spec.source_files = source_files
+    spec.resource_bundles = { 'SwiftI18n' => ['SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy'] }
   end
 
 end
