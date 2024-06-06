@@ -12,13 +12,26 @@ public class I18nManager {
 
     public static var instance = I18nManager()
     
+    public static var fallbackLanguage: String?
+    
     private init() {}
     
     public var defaultLanguage: String?
     public var availableLanguages: [String]?
     
     public var localizationPerformingBlock: (_ key: String, _ language: String)->(String) = { (key, language) in
-        return NSLocalizedString(key, tableName: language, comment: "")
+
+        let translation = NSLocalizedString(key, tableName: language, comment: "")
+        
+        guard translation == key else {
+            return translation
+        }
+
+        guard let fallbackLanguage = I18nManager.fallbackLanguage else {
+            return translation
+        }
+        
+        return NSLocalizedString(key, tableName: fallbackLanguage, comment: "")
     }
     
     private var _language: String?
