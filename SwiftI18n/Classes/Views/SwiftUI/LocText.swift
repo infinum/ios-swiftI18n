@@ -60,7 +60,7 @@ private extension LocText {
         func text(localizedIn language: String) -> Text {
             switch self {
             case .key(let key):
-                Text(I18nManager.instance.localizationPerformingBlock(key, language))
+                Text(I18nManager.instance.localizedString(forKey: key, language: language))
             case .text(let text):
                 text
             }

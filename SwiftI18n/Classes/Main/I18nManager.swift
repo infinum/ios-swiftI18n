@@ -20,20 +20,9 @@ public class I18nManager {
     public var availableLanguages: [String]?
     
     public var localizationPerformingBlock: (_ key: String, _ language: String)->(String) = { (key, language) in
-
-        let translation = NSLocalizedString(key, tableName: language, comment: "")
-        
-        guard translation == key else {
-            return translation
-        }
-
-        guard let fallbackLanguage = I18nManager.fallbackLanguage else {
-            return translation
-        }
-        
-        return NSLocalizedString(key, tableName: fallbackLanguage, comment: "")
+        return NSLocalizedString(key, tableName: language, comment: "")
     }
-    
+
     private var _language: String?
     public var language: String {
         set(newValue) {
@@ -71,8 +60,20 @@ public extension I18nManager {
 
 public extension I18nManager {
     
-    func localizedString(forKey key: String) -> String {
-        return localizationPerformingBlock(key, language)
+    func localizedString(forKey key: String, language: String? = nil) -> String {
+
+        var localizedString = localizationPerformingBlock(key, language ?? self.language)
+        
+        guard localizedString == key else {
+            return localizedString
+        }
+
+        guard let fallbackLanguage = I18nManager.fallbackLanguage else {
+            return localizedString
+        }
+
+        return localizationPerformingBlock(key, fallbackLanguage)
+        
     }
     
     subscript(locKey: String) -> String {
