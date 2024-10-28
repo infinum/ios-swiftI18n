@@ -148,7 +148,7 @@ For example in your LanguageInitializer class, initialize method, add the follow
 
 ```swift
 I18nManager.instance.fallbackLanguage = "en_gb"
-
+```
 
 
 ### Working with Polyglot client Strings enum
