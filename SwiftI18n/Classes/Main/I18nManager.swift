@@ -31,7 +31,8 @@ public class I18nManager {
     /// **Risks**:
     /// - If a localization key is the same as the translation (e.g., common terms like "ok," "done," or "cancel"),
     ///   and the `fallbackLanguage` is not set to English, the system will return a translation in the fallback
-    ///   language, even if an appropriate translation exists in the preferred language, this can lead to unintended substitutions
+    ///   language, even if an appropriate translation exists in the preferred language, this can lead to unintended substitutions. 
+    /// To avoid having the issue in the app, use more descriptive translation keys or use case-sensitive words as a translated word (e.g., "ok" != "Ok", "done" != "Done", etc.).
     ///
     /// Setting `fallbackLanguage` should be done with consideration of these potential overrides
     public var fallbackLanguage: String?
