@@ -25,14 +25,11 @@ extension UITextView: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let text = loc_keysDictionary[UITextView.loc_titleKey]?.localised else {
-            self.text  = ""
-            return
-        }
-        
-        let caseTransform = loc_keysDictionary[UITextView.case_titleKey]
-        self.text = text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        self.text = loc_keysDictionary[UITextView.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UITextView.case_titleKey] ?? "")) ?? ""
+
+        self.accessibilityLabel = loc_keysDictionary[UITextView.loc_accessibilityLabelKey]?.localised
+        self.accessibilityHint = loc_keysDictionary[UITextView.loc_accessibilityHintKey]?.localised
     }
     
 }
-

@@ -25,13 +25,11 @@ extension UIViewController: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UIViewController.loc_titleKey]?.localised else {
-            self.title = nil
-            return
-        }
-        
-        let caseTransform = loc_keysDictionary[UIViewController.case_titleKey]
-        self.title = title.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        self.title = loc_keysDictionary[UIViewController.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UIViewController.case_titleKey] ?? ""))
+
+        self.accessibilityLabel = loc_keysDictionary[UIViewController.loc_accessibilityLabelKey]?.localised
+        self.accessibilityHint = loc_keysDictionary[UIViewController.loc_accessibilityHintKey]?.localised
     }
     
 }
