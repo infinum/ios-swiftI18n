@@ -71,21 +71,23 @@ or if you prefer notifications, you can use:
 
 ```swift
 someLabel.locTitleKey = "some_key"
+someButton.locAccessibilityLabelKey = "button_accessibility_label_key"
+someButton.locAccessibilityHintKey = "button_accessibility_hint_key"
 ```
 
-Now when language changes, your `someLabel`'s title automaticaly changes. Isn't that great!?
+Now when language changes, your `someLabel`'s title, accessibility label and hint, automaticaly change. Isn't that great!?
 
 Supported elements:
-```UILabel ```
-```UIButton ```
-```UITextFiled ```
-```UITextView ```
-```UIViewController ```
-```UIBarButtonItem ```
-```UITabBarItem ```
-```UINavigationItem ```
+```UILabel```
+```UIButton```
+```UITextFiled```
+```UITextView```
+```UIViewController```
+```UIBarButtonItem```
+```UITabBarItem```
+```UINavigationItem```
 
-**And the most important thing, all of those `locTitleKey`'s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
+**And the most important thing, all of those `locTitleKey`s, `locAccessibilityLabelKey`s, `locAccessibilityHintKey`s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
 
 ### SwiftUI Support
 
@@ -144,7 +146,9 @@ into your project.
 By doing this you can now set translations to your UI elements with ease:
 
 ```swift
-someLabe.loc.titleKey = .somePolygotKey
+someLabel.loc.titleKey = .somePolygotKey
+someButton.loc.accessibilityLabelKey = .somePolyglotKey
+someButton.loc.accessibilityLabelHint = .somePolyglotKey
 ```
 
 ## Not supported 
