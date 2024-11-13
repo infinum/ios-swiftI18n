@@ -24,13 +24,11 @@ extension UIBarButtonItem: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UIBarButtonItem.loc_titleKey]?.localised else {
-            self.title = nil
-            return
-        }
+        self.title = loc_keysDictionary[UIBarButtonItem.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UIBarButtonItem.case_titleKey] ?? ""))
         
-        let caseTransform = loc_keysDictionary[UIBarButtonItem.case_titleKey]
-        self.title = title.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        self.accessibilityLabel = loc_keysDictionary[UIBarButtonItem.loc_accessibilityLabelKey]?.localised
+        self.accessibilityHint = loc_keysDictionary[UIBarButtonItem.loc_accessibilityHintKey]?.localised
     }
-    
+
 }

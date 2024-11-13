@@ -11,7 +11,9 @@ import UIKit
 public extension UILabel {
     
     static let loc_titleKey = "KEY"
-    
+    static let loc_accessibilityLabelKey = "ACCESSIBILITY_LABEL_KEY"
+    static let loc_accessibilityHintKey = "ACCESSIBILITY_HINT_KEY"
+
     @IBInspectable var locTitleKey: String? {
         get {
             return loc_keysDictionary[UILabel.loc_titleKey]
@@ -19,6 +21,28 @@ public extension UILabel {
         
         set(newValue) {
             loc_keysDictionary[UILabel.loc_titleKey] = newValue
+            loc_localeDidChange()
+        }
+    }
+
+    @IBInspectable var locAccessibilityLabelKey: String? {
+        get {
+            return loc_keysDictionary[UILabel.loc_accessibilityLabelKey]
+        }
+
+        set(newValue) {
+            loc_keysDictionary[UILabel.loc_accessibilityLabelKey] = newValue
+            loc_localeDidChange()
+        }
+    }
+
+    @IBInspectable var locAccessibilityHintKey: String? {
+        get {
+            return loc_keysDictionary[UILabel.loc_accessibilityHintKey]
+        }
+
+        set(newValue) {
+            loc_keysDictionary[UILabel.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }

@@ -24,14 +24,11 @@ extension UITabBarItem: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UITabBarItem.loc_titleKey]?.localised else {
-            self.title = nil
-            return
-        }
-        
-        let caseTransform = loc_keysDictionary[UITabBarItem.case_titleKey]
-        self.title = title.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        self.title = loc_keysDictionary[UITabBarItem.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UITabBarItem.case_titleKey] ?? ""))
+
+        self.accessibilityLabel = loc_keysDictionary[UITabBarItem.loc_accessibilityLabelKey]?.localised
+        self.accessibilityHint = loc_keysDictionary[UITabBarItem.loc_accessibilityHintKey]?.localised
     }
     
 }
-

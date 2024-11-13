@@ -39,22 +39,14 @@ extension UISearchBar: I18n {
     }
     
     func loc_localeDidChange() {
-        let text = loc_keysDictionary[UISearchBar.loc_titleKey]?.localised
-        let placeholder = loc_keysDictionary[UISearchBar.loc_placeholderKey]?.localised
-        
-        if let text = text {
-            let caseTransform = loc_keysDictionary[UISearchBar.case_titleKey]
-            self.text = text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
-        } else {
-            self.text = nil
-        }
-        
-        if let placeholder = placeholder {
-            let casePlaceholderTransform = loc_keysDictionary[UISearchBar.case_placeholderKey]
-            self.placeholder = placeholder.transform(with: I18nCaseTransform(rawValue: casePlaceholderTransform ?? ""))
-        } else {
-            self.placeholder = nil
-        }
+        self.text = loc_keysDictionary[UISearchBar.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UISearchBar.case_titleKey] ?? ""))
+
+        self.placeholder = loc_keysDictionary[UISearchBar.loc_placeholderKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UISearchBar.case_placeholderKey] ?? ""))
+
+        self.accessibilityLabel = loc_keysDictionary[UISearchBar.loc_accessibilityLabelKey]?.localised
+        self.accessibilityHint = loc_keysDictionary[UISearchBar.loc_accessibilityHintKey]?.localised
     }
     
 }

@@ -34,6 +34,8 @@ extension UIButton: I18n {
     
     func loc_localeDidChange() {
         loc_allStates.forEach { loc_localeDidChange(for: $0) }
+        self.accessibilityLabel = loc_keysDictionary[UIButton.loc_accessibilityLabelKey]?.localised
+        self.accessibilityHint = loc_keysDictionary[UIButton.loc_accessibilityHintKey]?.localised
     }
     
     func loc_localeDidChange(`for` state: UIControl.State) {
@@ -47,4 +49,3 @@ extension UIButton: I18n {
     }
     
 }
-
