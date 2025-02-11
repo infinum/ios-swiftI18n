@@ -47,6 +47,7 @@ public class I18nManager {
             _language = newValue
             UserDefaults.standard.set(newValue, forKey: .language)
             UserDefaults.standard.set([newValue], forKey: .appleLanguages)
+            UIApplication.shared.accessibilityLanguage = newValue
             NotificationCenter.default.post(name: .loc_LanguageDidChangeNotification, object: nil)
         }
         get {
