@@ -8,14 +8,6 @@
 
 import UIKit
 
-extension UIControl.State: Hashable {
-    
-    public var hashValue: Int {
-        return Int(self.rawValue)
-    }
-    
-}
-
 public extension UIButton {
     
     @IBInspectable var locTitleKey: String? {
@@ -30,16 +22,14 @@ public extension UIButton {
     }
     
     func setLocTitleKey(_ key: String?, `for` state: UIControl.State) {
-        loc_keysDictionary[state] = key
+        loc_keysDictionary[state.rawValue] = key
     }
     
     func locTitleKey(`for` state: UIControl.State) -> String? {
-        return loc_keysDictionary[state]
+        return loc_keysDictionary[state.rawValue]
     }
     
     var loc_allStates: [UIControl.State] {
         return [.normal, .disabled, .highlighted, .selected]
     }
-    
 }
-
