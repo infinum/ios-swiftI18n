@@ -137,6 +137,22 @@ someButton.setCaseTransform(.uppercased, for: .normal)
 
 You can also set case transform in ```Storyboards ```.
 
+
+### Fallback Language
+
+In some scenarios, a requested localization may not be available for a given language. To ensure a consistent user experience, the app provides a **fallback language** mechanism. This feature guarantees that if a translation is missing in the preferred language, a predefined fallback language will be used to retrieve the localization instead.
+
+#### Setting the Fallback Language
+
+You can configure the fallback language by setting the `fallbackLanguage` property in your localization manager.
+
+For example in your LanguageInitializer class, initialize method, add the following line:
+
+```swift
+I18nManager.instance.fallbackLanguage = "en_gb"
+```
+
+
 ### Working with Polyglot client Strings enum
 
 For SwiftI18n to work beautifly with polyglot client created `Strings` enum you will need to copy:
