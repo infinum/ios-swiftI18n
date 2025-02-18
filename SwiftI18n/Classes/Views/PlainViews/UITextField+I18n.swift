@@ -11,17 +11,10 @@ import UIKit
 extension UITextField: I18n {
     
     func loc_localeDidChange() {
-        let text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
-        let placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
-        
-        if let text = text {
-            self.text = text
-        }
-        
-        if let placeholder = placeholder {
-            self.placeholder = placeholder
-        }
-        
+        text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
+        placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
+        accessibilityLabel = loc_keysDictionary[UITextField.loc_accessibilityLabelKey]?.localised
+        accessibilityHint = loc_keysDictionary[UITextField.loc_accessibilityHintKey]?.localised
     }
     
 }

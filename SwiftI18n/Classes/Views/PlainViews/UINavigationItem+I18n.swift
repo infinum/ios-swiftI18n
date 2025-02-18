@@ -10,8 +10,9 @@ import UIKit
 extension UINavigationItem: I18n {
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UINavigationItem.loc_titleKey]?.localised else {return}
-        self.title = title
+        title = loc_keysDictionary[UINavigationItem.loc_titleKey]?.localised
+        accessibilityLabel = loc_keysDictionary[UINavigationItem.loc_accessibilityLabelKey]?.localised
+        accessibilityHint = loc_keysDictionary[UINavigationItem.loc_accessibilityHintKey]?.localised
     }
     
 }
