@@ -10,7 +10,7 @@ import UIKit
 extension UIBarButtonItem: I18n {
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UILabel.loc_titleKey]?.localised else {return}
+        guard let title = loc_keysDictionary[UIBarButtonItem.loc_titleKey]?.localised else {return}
         self.title = title
     }
     

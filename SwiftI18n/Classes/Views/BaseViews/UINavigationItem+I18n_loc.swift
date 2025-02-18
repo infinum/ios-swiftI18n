@@ -15,11 +15,11 @@ public extension UINavigationItem {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UIViewController.loc_titleKey]
+            return loc_keysDictionary[UINavigationItem.loc_titleKey]
         }
 
         set(newValue) {
-            loc_keysDictionary[UIViewController.loc_titleKey] = newValue
+            loc_keysDictionary[UINavigationItem.loc_titleKey] = newValue
             loc_localeDidChange()
         }
     }

@@ -10,9 +10,9 @@ import UIKit
 extension UISearchBar: I18n {
 
     func loc_localeDidChange() {
-        let text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
-        let placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
-        
+        let text = loc_keysDictionary[UISearchBar.loc_titleKey]?.localised
+        let placeholder = loc_keysDictionary[UISearchBar.loc_placeholderKey]?.localised
+
         if let text = text {
             self.text = text
         }
