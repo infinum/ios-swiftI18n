@@ -15,9 +15,8 @@ public extension UINavigationItem {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UINavigationItem.loc_titleKey]
+            loc_keysDictionary[UINavigationItem.loc_titleKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UINavigationItem.loc_titleKey] = newValue
             loc_localeDidChange()
@@ -26,9 +25,8 @@ public extension UINavigationItem {
 
     @IBInspectable var locAccessibilityLabelKey: String? {
         get {
-            return loc_keysDictionary[UINavigationItem.loc_accessibilityLabelKey]
+            loc_keysDictionary[UINavigationItem.loc_accessibilityLabelKey]
         }
-
         set {
             loc_keysDictionary[UINavigationItem.loc_accessibilityLabelKey] = newValue
             loc_localeDidChange()
@@ -37,13 +35,11 @@ public extension UINavigationItem {
 
     @IBInspectable var locAccessibilityHintKey: String? {
         get {
-            return loc_keysDictionary[UINavigationItem.loc_accessibilityHintKey]
+            loc_keysDictionary[UINavigationItem.loc_accessibilityHintKey]
         }
-        
         set {
             loc_keysDictionary[UINavigationItem.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }
-    
 }

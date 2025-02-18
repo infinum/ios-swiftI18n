@@ -15,9 +15,8 @@ public extension UIBarButtonItem {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UIBarButtonItem.loc_titleKey]
+            loc_keysDictionary[UIBarButtonItem.loc_titleKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UIBarButtonItem.loc_titleKey] = newValue
             loc_localeDidChange()
@@ -26,9 +25,8 @@ public extension UIBarButtonItem {
 
     @IBInspectable var locAccessibilityLabelKey: String? {
         get {
-            return loc_keysDictionary[UIBarButtonItem.loc_accessibilityLabelKey]
+            loc_keysDictionary[UIBarButtonItem.loc_accessibilityLabelKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UIBarButtonItem.loc_accessibilityLabelKey] = newValue
             loc_localeDidChange()
@@ -37,13 +35,11 @@ public extension UIBarButtonItem {
 
     @IBInspectable var locAccessibilityHintKey: String? {
         get {
-            return loc_keysDictionary[UIBarButtonItem.loc_accessibilityHintKey]
+            loc_keysDictionary[UIBarButtonItem.loc_accessibilityHintKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UIBarButtonItem.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }
-
 }
