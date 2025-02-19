@@ -24,7 +24,7 @@ public extension UITextView {
         }
     }
 
-    @IBInspectable var locAccessibilityLabelKey: String? {
+    @IBInspectable override var locAccessibilityLabelKey: String? {
         get {
             loc_keysDictionary[UITextView.loc_accessibilityLabelKey]
         }
@@ -34,7 +34,7 @@ public extension UITextView {
         }
     }
 
-    @IBInspectable var locAccessibilityHintKey: String? {
+    @IBInspectable override var locAccessibilityHintKey: String? {
         get {
             loc_keysDictionary[UITextView.loc_accessibilityHintKey]
         }

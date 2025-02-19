@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UITextField: I18n {
+extension UITextField {
     
-    func loc_localeDidChange() {
+    override func loc_localeDidChange() {
         text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
         placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
         accessibilityLabel = loc_keysDictionary[UITextField.loc_accessibilityLabelKey]?.localised

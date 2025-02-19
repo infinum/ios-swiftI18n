@@ -39,7 +39,7 @@ public extension UIButton {
         loc_keysDictionary[state]
     }
 
-    @IBInspectable var locAccessibilityLabelKey: String? {
+    @IBInspectable override var locAccessibilityLabelKey: String? {
         get {
             loc_keysDictionary[UIButton.loc_accessibilityLabelKey]
         }
@@ -49,7 +49,7 @@ public extension UIButton {
         }
     }
 
-    @IBInspectable var locAccessibilityHintKey: String? {
+    @IBInspectable override var locAccessibilityHintKey: String? {
         get {
             loc_keysDictionary[UIButton.loc_accessibilityHintKey]
         }

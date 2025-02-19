@@ -33,6 +33,8 @@
 		AB29FB8BB5EC40DC5D9292AEFF7BF6C8 /* String+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2CF1A4D8985524A955F1402E74FD5B /* String+I18n.swift */; };
 		B04B1C5573BB822E7A5215873895CCDE /* Pods-SwiftI18n_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9498A7563F45DEA64DCBFF21844267A4 /* Pods-SwiftI18n_Tests-dummy.m */; };
 		B0BDBE454E9E0583B2B9CD0F574D33C6 /* ViewController+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B81B79C65CD93FD8B3D4A3CF8C269F9 /* ViewController+I18n_loc.swift */; };
+		B77B761F2D65D24B00FEACB3 /* UIView+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B761E2D65D24300FEACB3 /* UIView+I18n_loc.swift */; };
+		B77B76212D65D49400FEACB3 /* UIView+I18n_case.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77B76202D65D48C00FEACB3 /* UIView+I18n_case.swift */; };
 		BEA9CBB26E7AB3F5321A775305C4D827 /* UIBarButtonItem+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7726FF08DE2F2D69E45AF2317C6285A0 /* UIBarButtonItem+I18n_loc.swift */; };
 		C092AD12936B207993849BF35DD98914 /* UITextView+I18n_case.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C8120CBBF7F38B0B8F6E295BA8C65 /* UITextView+I18n_case.swift */; };
 		CE7F1428DC2B22BD2DD1000DB48AB385 /* SwiftI18n-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBDAF75AE4D9FBAA5E93DC7CC28B095C /* SwiftI18n-dummy.m */; };
@@ -100,6 +102,8 @@
 		A711B5DEFEE65C4123B27378B725A716 /* UIButton+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+I18n_loc.swift"; sourceTree = "<group>"; };
 		A78851D0C62FC19474427304E9CDCA1E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B46516C4DBBB15483A68C5FEB5816FC6 /* Pods-SwiftI18n_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftI18n_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B77B761E2D65D24300FEACB3 /* UIView+I18n_loc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+I18n_loc.swift"; sourceTree = "<group>"; };
+		B77B76202D65D48C00FEACB3 /* UIView+I18n_case.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+I18n_case.swift"; sourceTree = "<group>"; };
 		BCA90703C28E0D5BB9E0AF620CD5F57F /* UITextField+I18n_case.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextField+I18n_case.swift"; sourceTree = "<group>"; };
 		BF1C8120CBBF7F38B0B8F6E295BA8C65 /* UITextView+I18n_case.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+I18n_case.swift"; sourceTree = "<group>"; };
 		C0DCB9A258AF498F45156B24A159E97C /* Pods-SwiftI18n_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftI18n_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 		5A27F860830BC1D3CAAEF76501026676 /* CaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				B77B76202D65D48C00FEACB3 /* UIView+I18n_case.swift */,
 				57C8BC3EC20996C8E351AD62A89A7DF6 /* UIBarButtonItem+I18n_case.swift */,
 				19FAFCC823A6658606EF9DDC3DEACA13 /* UIButton+I18n_case.swift */,
 				268E02A2A07D1AA2544356A820308ED0 /* UILabel+I18n_case.swift */,
@@ -185,6 +190,7 @@
 		6A28F0B0DC9E202D489B80850E1B7215 /* BaseViews */ = {
 			isa = PBXGroup;
 			children = (
+				B77B761E2D65D24300FEACB3 /* UIView+I18n_loc.swift */,
 				7726FF08DE2F2D69E45AF2317C6285A0 /* UIBarButtonItem+I18n_loc.swift */,
 				A711B5DEFEE65C4123B27378B725A716 /* UIButton+I18n_loc.swift */,
 				28DD26D32BC9BDDD10191E82ABE27D69 /* UILabel+I18n_loc.swift */,
@@ -504,6 +510,7 @@
 				4968F10975AF93A59BBBC608CEBE3869 /* NSNotification+I18n.swift in Sources */,
 				AB29FB8BB5EC40DC5D9292AEFF7BF6C8 /* String+I18n.swift in Sources */,
 				CE7F1428DC2B22BD2DD1000DB48AB385 /* SwiftI18n-dummy.m in Sources */,
+				B77B76212D65D49400FEACB3 /* UIView+I18n_case.swift in Sources */,
 				414766CD2C382204DFEFA951CBA2ACDB /* UIBarButtonItem+I18n_case.swift in Sources */,
 				BEA9CBB26E7AB3F5321A775305C4D827 /* UIBarButtonItem+I18n_loc.swift in Sources */,
 				92BD70E97C6C9B9CD602A27A7845B916 /* UIButton+I18n_case.swift in Sources */,
@@ -513,6 +520,7 @@
 				0A782D088B4788200699D5BAFFE28796 /* UINavigationItem+I18n_case.swift in Sources */,
 				9D68EAD1DEDEA0539490398867BC37B6 /* UINavigationItem+I18n_loc.swift in Sources */,
 				824DD7EA16B745A37BA6634F8F96AFD5 /* UISearchBar+I18n_case.swift in Sources */,
+				B77B761F2D65D24B00FEACB3 /* UIView+I18n_loc.swift in Sources */,
 				26A256EC4505D81CDD1AA59D0D87BE69 /* UISearchBar+I18n_loc.swift in Sources */,
 				FBE0C1B103AB1728DB8D6311B59553F8 /* UITabBarItem+I18n_case.swift in Sources */,
 				31CB6DEE92AD5930BA536167B66022B8 /* UITabBarItem+I18n_loc.swift in Sources */,

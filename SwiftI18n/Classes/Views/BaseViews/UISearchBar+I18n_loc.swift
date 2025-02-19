@@ -34,7 +34,7 @@ public extension UISearchBar {
         }
     }
 
-    @IBInspectable var locAccessibilityLabelKey: String? {
+    @IBInspectable override var locAccessibilityLabelKey: String? {
         get {
             loc_keysDictionary[UISearchBar.loc_accessibilityLabelKey]
         }
@@ -44,7 +44,7 @@ public extension UISearchBar {
         }
     }
 
-    @IBInspectable var locAccessibilityHintKey: String? {
+    @IBInspectable override var locAccessibilityHintKey: String? {
         get {
             loc_keysDictionary[UISearchBar.loc_accessibilityHintKey]
         }

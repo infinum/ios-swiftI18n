@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton: I18n {
+extension UIButton {
     
     func loc_localeDidChange() {
         loc_allStates.forEach { loc_localeDidChange(for: $0) }
@@ -16,10 +16,9 @@ extension UIButton: I18n {
         accessibilityHint = loc_keysDictionary[UIButton.loc_accessibilityHintKey]?.localised
     }
     
-    func loc_localeDidChange(`for` state: UIControl.State) {
+    override func loc_localeDidChange(`for` state: UIControl.State) {
         guard let text = loc_keysDictionary[state]?.localised  else { return }
         setTitle(text, for: state)
     }
-    
 }
 
