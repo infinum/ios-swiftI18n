@@ -16,9 +16,8 @@ public extension UILabel {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UILabel.loc_titleKey]
+            loc_keysDictionary[UILabel.loc_titleKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UILabel.loc_titleKey] = newValue
             loc_localeDidChange()
@@ -27,9 +26,8 @@ public extension UILabel {
 
     @IBInspectable var locAccessibilityLabelKey: String? {
         get {
-            return loc_keysDictionary[UILabel.loc_accessibilityLabelKey]
+            loc_keysDictionary[UILabel.loc_accessibilityLabelKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UILabel.loc_accessibilityLabelKey] = newValue
             loc_localeDidChange()
@@ -38,13 +36,11 @@ public extension UILabel {
 
     @IBInspectable var locAccessibilityHintKey: String? {
         get {
-            return loc_keysDictionary[UILabel.loc_accessibilityHintKey]
+            loc_keysDictionary[UILabel.loc_accessibilityHintKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UILabel.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }
-    
 }

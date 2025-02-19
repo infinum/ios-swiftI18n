@@ -17,9 +17,8 @@ public extension UITextField {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UITextField.loc_titleKey]
+            loc_keysDictionary[UITextField.loc_titleKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UITextField.loc_titleKey] = newValue
             loc_localeDidChange()
@@ -28,9 +27,8 @@ public extension UITextField {
     
     @IBInspectable var locPlaceholderKey: String? {
         get {
-            return loc_keysDictionary[UITextField.loc_placeholderKey]
+            loc_keysDictionary[UITextField.loc_placeholderKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UITextField.loc_placeholderKey] = newValue
             loc_localeDidChange()
@@ -39,9 +37,8 @@ public extension UITextField {
 
     @IBInspectable var locAccessibilityLabelKey: String? {
         get {
-            return loc_keysDictionary[UITextField.loc_accessibilityLabelKey]
+            loc_keysDictionary[UITextField.loc_accessibilityLabelKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UITextField.loc_accessibilityLabelKey] = newValue
             loc_localeDidChange()
@@ -50,13 +47,11 @@ public extension UITextField {
 
     @IBInspectable var locAccessibilityHintKey: String? {
         get {
-            return loc_keysDictionary[UITextField.loc_accessibilityHintKey]
+            loc_keysDictionary[UITextField.loc_accessibilityHintKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UITextField.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }
-
 }

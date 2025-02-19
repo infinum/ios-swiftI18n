@@ -15,20 +15,18 @@ public extension UITabBarItem {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UIViewController.loc_titleKey]
+            loc_keysDictionary[UITabBarItem.loc_titleKey]
         }
-        
         set(newValue) {
-            loc_keysDictionary[UIViewController.loc_titleKey] = newValue
+            loc_keysDictionary[UITabBarItem.loc_titleKey] = newValue
             loc_localeDidChange()
         }
     }
 
     @IBInspectable var locAccessibilityLabelKey: String? {
         get {
-            return loc_keysDictionary[UITabBarItem.loc_accessibilityLabelKey]
+            loc_keysDictionary[UITabBarItem.loc_accessibilityLabelKey]
         }
-
         set(newValue) {
             loc_keysDictionary[UITabBarItem.loc_accessibilityLabelKey] = newValue
             loc_localeDidChange()
@@ -37,14 +35,12 @@ public extension UITabBarItem {
 
     @IBInspectable var locAccessibilityHintKey: String? {
         get {
-            return loc_keysDictionary[UITabBarItem.loc_accessibilityHintKey]
+            loc_keysDictionary[UITabBarItem.loc_accessibilityHintKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UITabBarItem.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }
-
 }
 

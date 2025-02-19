@@ -23,9 +23,8 @@ public extension UIButton {
 
     @IBInspectable var locTitleKey: String? {
         get {
-            return locTitleKey(for: .normal)
+            locTitleKey(for: .normal)
         }
-        
         set(newValue) {
             loc_allStates.forEach { setLocTitleKey(newValue, for: $0) }
             loc_localeDidChange()
@@ -37,14 +36,13 @@ public extension UIButton {
     }
     
     func locTitleKey(`for` state: UIControl.State) -> String? {
-        return loc_keysDictionary[state]
+        loc_keysDictionary[state]
     }
 
     @IBInspectable var locAccessibilityLabelKey: String? {
         get {
-            return loc_keysDictionary[UIButton.loc_accessibilityLabelKey]
+            loc_keysDictionary[UIButton.loc_accessibilityLabelKey]
         }
-
         set {
             loc_keysDictionary[UIButton.loc_accessibilityLabelKey] = newValue
             loc_localeDidChange()
@@ -53,9 +51,8 @@ public extension UIButton {
 
     @IBInspectable var locAccessibilityHintKey: String? {
         get {
-            return loc_keysDictionary[UIButton.loc_accessibilityHintKey]
+            loc_keysDictionary[UIButton.loc_accessibilityHintKey]
         }
-        
         set {
             loc_keysDictionary[UIButton.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
@@ -65,5 +62,4 @@ public extension UIButton {
     var loc_allStates: [UIControl.State] {
         return [.normal, .disabled, .highlighted, .selected]
     }
-    
 }
