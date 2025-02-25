@@ -23,10 +23,8 @@ extension UITextView {
     }
     
     override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UITextView.loc_titleKey]?.localised
             .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UITextView.case_titleKey] ?? "")) ?? ""
-
-        accessibilityLabel = loc_keysDictionary[UITextView.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UITextView.loc_accessibilityHintKey]?.localised
     }
 }

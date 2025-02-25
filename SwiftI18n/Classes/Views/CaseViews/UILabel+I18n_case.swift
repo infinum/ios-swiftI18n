@@ -23,9 +23,8 @@ extension UILabel {
     }
     
     override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UILabel.loc_titleKey]?.localised
             .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UILabel.case_titleKey] ?? ""))
-        accessibilityLabel = loc_keysDictionary[UILabel.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UILabel.loc_accessibilityHintKey]?.localised
     }
 }
