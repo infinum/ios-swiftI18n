@@ -11,9 +11,8 @@ import UIKit
 extension UITextView {
     
     override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UITextView.loc_titleKey]?.localised
-        accessibilityLabel = loc_keysDictionary[UITextView.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UITextView.loc_accessibilityHintKey]?.localised
     }
     
 }

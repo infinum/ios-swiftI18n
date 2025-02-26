@@ -11,9 +11,8 @@ import UIKit
 extension UILabel {
     
     override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UILabel.loc_titleKey]?.localised
-        accessibilityLabel = loc_keysDictionary[UILabel.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UILabel.loc_accessibilityHintKey]?.localised
     }
     
 }

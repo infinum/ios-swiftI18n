@@ -11,10 +11,9 @@ import UIKit
 extension UITextField {
     
     override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
         placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
-        accessibilityLabel = loc_keysDictionary[UITextField.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UITextField.loc_accessibilityHintKey]?.localised
     }
     
 }
