@@ -12,11 +12,9 @@ extension UINavigationItem: I18n {
     private static let case_titleKey = "CKEY"
     
     @IBInspectable public var caseTransform: String? {
-        
         get {
-            return loc_keysDictionary[UINavigationItem.case_titleKey]
+            loc_keysDictionary[UINavigationItem.case_titleKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UINavigationItem.case_titleKey] = newValue
             loc_localeDidChange()
@@ -24,13 +22,9 @@ extension UINavigationItem: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UINavigationItem.loc_titleKey]?.localised else {
-            self.title = nil
-            return
-        }
-        
-        let caseTransform = loc_keysDictionary[UINavigationItem.case_titleKey]
-        self.title = title.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        title = loc_keysDictionary[UINavigationItem.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UINavigationItem.case_titleKey] ?? ""))
+        accessibilityLabel = loc_keysDictionary[UINavigationItem.loc_accessibilityLabelKey]?.localised
+        accessibilityHint = loc_keysDictionary[UINavigationItem.loc_accessibilityHintKey]?.localised
     }
-    
 }

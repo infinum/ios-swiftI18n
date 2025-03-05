@@ -14,6 +14,8 @@ public struct Localizable<Base: LocKeyAcceptable> {
 
 public protocol LocKeyAcceptable: AnyObject {
     var locTitleKey: String? { get set }
+    var locAccessibilityLabelKey: String? { get set }
+    var locAccessibilityHintKey: String? { get set }
 }
 
 public extension LocKeyAcceptable {
