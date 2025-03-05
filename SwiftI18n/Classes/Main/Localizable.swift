@@ -14,6 +14,9 @@ public struct Localizable<Base: LocKeyAcceptable> {
 
 public protocol LocKeyAcceptable: AnyObject {
     var locTitleKey: String? { get set }
+}
+
+public protocol AccessibilityLocKeyAcceptable: AnyObject {
     var locAccessibilityLabelKey: String? { get set }
     var locAccessibilityHintKey: String? { get set }
 }
@@ -25,12 +28,23 @@ public extension LocKeyAcceptable {
     }
 }
 
-extension UIBarButtonItem: LocKeyAcceptable {}
+// MARK: - Conforming views -
+
+// MARK: - UIView
+
+extension UIView: AccessibilityLocKeyAcceptable {}
+
+// MARK: - UIView subviews
+
 extension UILabel: LocKeyAcceptable {}
-extension UINavigationItem: LocKeyAcceptable {}
-extension UITabBarItem: LocKeyAcceptable {}
 extension UITextView: LocKeyAcceptable {}
 extension UIButton: LocKeyAcceptable {}
 extension UITextField: LocKeyAcceptable {}
-extension UIViewController: LocKeyAcceptable {}
 extension UISearchBar: LocKeyAcceptable {}
+
+// MARK: - Views that are not subviews of UIView
+
+extension UIBarButtonItem: LocKeyAcceptable & AccessibilityLocKeyAcceptable {}
+extension UINavigationItem: LocKeyAcceptable & AccessibilityLocKeyAcceptable {}
+extension UITabBarItem: LocKeyAcceptable & AccessibilityLocKeyAcceptable {}
+extension UIViewController: LocKeyAcceptable & AccessibilityLocKeyAcceptable {}

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UITextField: I18n {
+extension UITextField {
     
     private static let case_titleKey = "CKEY"
     private static let case_placeholderKey = "CPKEY"
@@ -33,12 +33,11 @@ extension UITextField: I18n {
         }
     }
     
-    func loc_localeDidChange() {
+    override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UITextField.loc_titleKey]?.localised
             .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UITextField.case_titleKey] ?? ""))
         placeholder = loc_keysDictionary[UITextField.loc_placeholderKey]?.localised
             .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UITextField.case_placeholderKey] ?? ""))
-        accessibilityLabel = loc_keysDictionary[UITextField.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UITextField.loc_accessibilityHintKey]?.localised
     }
 }

@@ -18,9 +18,6 @@ extension UIControl.State: Hashable {
 
 public extension UIButton {
 
-    static let loc_accessibilityLabelKey = "ACCESSIBILITY_LABEL_KEY"
-    static let loc_accessibilityHintKey = "ACCESSIBILITY_HINT_KEY"
-
     @IBInspectable var locTitleKey: String? {
         get {
             locTitleKey(for: .normal)
@@ -37,26 +34,6 @@ public extension UIButton {
     
     func locTitleKey(`for` state: UIControl.State) -> String? {
         loc_keysDictionary[state]
-    }
-
-    @IBInspectable var locAccessibilityLabelKey: String? {
-        get {
-            loc_keysDictionary[UIButton.loc_accessibilityLabelKey]
-        }
-        set {
-            loc_keysDictionary[UIButton.loc_accessibilityLabelKey] = newValue
-            loc_localeDidChange()
-        }
-    }
-
-    @IBInspectable var locAccessibilityHintKey: String? {
-        get {
-            loc_keysDictionary[UIButton.loc_accessibilityHintKey]
-        }
-        set {
-            loc_keysDictionary[UIButton.loc_accessibilityHintKey] = newValue
-            loc_localeDidChange()
-        }
     }
 
     var loc_allStates: [UIControl.State] {

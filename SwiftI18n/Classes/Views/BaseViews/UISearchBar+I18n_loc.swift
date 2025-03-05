@@ -11,8 +11,6 @@ public extension UISearchBar {
     
     static let loc_titleKey = "KEY"
     static let loc_placeholderKey = "PKEY"
-    static let loc_accessibilityLabelKey = "ACCESSIBILITY_LABEL_KEY"
-    static let loc_accessibilityHintKey = "ACCESSIBILITY_HINT_KEY"
 
     @IBInspectable var locTitleKey: String? {
         get {
@@ -30,26 +28,6 @@ public extension UISearchBar {
         }
         set(newValue) {
             loc_keysDictionary[UISearchBar.loc_placeholderKey] = newValue
-            loc_localeDidChange()
-        }
-    }
-
-    @IBInspectable var locAccessibilityLabelKey: String? {
-        get {
-            loc_keysDictionary[UISearchBar.loc_accessibilityLabelKey]
-        }
-        set(newValue) {
-            loc_keysDictionary[UISearchBar.loc_accessibilityLabelKey] = newValue
-            loc_localeDidChange()
-        }
-    }
-
-    @IBInspectable var locAccessibilityHintKey: String? {
-        get {
-            loc_keysDictionary[UISearchBar.loc_accessibilityHintKey]
-        }
-        set(newValue) {
-            loc_keysDictionary[UISearchBar.loc_accessibilityHintKey] = newValue
             loc_localeDidChange()
         }
     }
