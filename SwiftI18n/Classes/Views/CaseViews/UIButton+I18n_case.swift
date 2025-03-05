@@ -13,11 +13,9 @@ extension UIButton: I18n {
     private static let case_titleKey = "CKEY"
     
     @IBInspectable public var caseTransform: String? {
-        
         get {
-            return caseTransform(for: .normal)?.rawValue
+            caseTransform(for: .normal)?.rawValue
         }
-        
         set(newValue) {
             loc_allStates.forEach { setCaseTransform(I18nCaseTransform(rawValue: newValue ?? ""), for: $0) }
             loc_localeDidChange()
@@ -34,6 +32,8 @@ extension UIButton: I18n {
     
     func loc_localeDidChange() {
         loc_allStates.forEach { loc_localeDidChange(for: $0) }
+        accessibilityLabel = loc_keysDictionary[UIButton.loc_accessibilityLabelKey]?.localised
+        accessibilityHint = loc_keysDictionary[UIButton.loc_accessibilityHintKey]?.localised
     }
     
     func loc_localeDidChange(`for` state: UIControl.State) {
@@ -45,6 +45,4 @@ extension UIButton: I18n {
         let caseTransform = loc_keysDictionary["\(state)\(UIButton.case_titleKey)"]
         setTitle(text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? "")), for: state)
     }
-    
 }
-

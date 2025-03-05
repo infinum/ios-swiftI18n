@@ -13,11 +13,9 @@ extension UILabel: I18n {
     private static let case_titleKey = "CKEY"
     
     @IBInspectable public var caseTransform: String? {
-        
         get {
-            return loc_keysDictionary[UILabel.case_titleKey]
+            loc_keysDictionary[UILabel.case_titleKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UILabel.case_titleKey] = newValue
             loc_localeDidChange()
@@ -25,13 +23,9 @@ extension UILabel: I18n {
     }
     
     func loc_localeDidChange() {
-        guard let text = loc_keysDictionary[UILabel.loc_titleKey]?.localised else {
-            self.text = nil
-            return
-        }
-        
-        let caseTransform = loc_keysDictionary[UILabel.case_titleKey]
-        self.text = text.transform(with: I18nCaseTransform(rawValue: caseTransform ?? ""))
+        text = loc_keysDictionary[UILabel.loc_titleKey]?.localised
+            .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UILabel.case_titleKey] ?? ""))
+        accessibilityLabel = loc_keysDictionary[UILabel.loc_accessibilityLabelKey]?.localised
+        accessibilityHint = loc_keysDictionary[UILabel.loc_accessibilityHintKey]?.localised
     }
-    
 }

@@ -10,8 +10,9 @@ import UIKit
 extension UITabBarItem: I18n {
     
     func loc_localeDidChange() {
-        guard let title = loc_keysDictionary[UILabel.loc_titleKey]?.localised else {return}
-        self.title = title
+        title = loc_keysDictionary[UITabBarItem.loc_titleKey]?.localised
+        accessibilityLabel = loc_keysDictionary[UITabBarItem.loc_accessibilityLabelKey]?.localised
+        accessibilityHint = loc_keysDictionary[UITabBarItem.loc_accessibilityHintKey]?.localised
     }
     
 }

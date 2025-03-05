@@ -8,22 +8,40 @@
 
 import UIKit
 
-extension UITextView {
-    
+public extension UITextView {
+
     static let loc_titleKey = "KEY"
-    
-    @IBInspectable public var locTitleKey: String? {
-        
+    static let loc_accessibilityLabelKey = "ACCESSIBILITY_LABEL_KEY"
+    static let loc_accessibilityHintKey = "ACCESSIBILITY_HINT_KEY"
+
+    @IBInspectable var locTitleKey: String? {
         get {
-            return loc_keysDictionary[UITextView.loc_titleKey]
+            loc_keysDictionary[UITextView.loc_titleKey]
         }
-        
         set(newValue) {
             loc_keysDictionary[UITextView.loc_titleKey] = newValue
             loc_localeDidChange()
         }
-        
     }
-    
+
+    @IBInspectable var locAccessibilityLabelKey: String? {
+        get {
+            loc_keysDictionary[UITextView.loc_accessibilityLabelKey]
+        }
+        set(newValue) {
+            loc_keysDictionary[UITextView.loc_accessibilityLabelKey] = newValue
+            loc_localeDidChange()
+        }
+    }
+
+    @IBInspectable var locAccessibilityHintKey: String? {
+        get {
+            loc_keysDictionary[UITextView.loc_accessibilityHintKey]
+        }
+        set(newValue) {
+            loc_keysDictionary[UITextView.loc_accessibilityHintKey] = newValue
+            loc_localeDidChange()
+        }
+    }
 }
 
