@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UISearchBar: I18n {
+extension UISearchBar {
     
     private static let case_titleKey = "CKEY"
     private static let case_placeholderKey = "CPKEY"
@@ -32,12 +32,11 @@ extension UISearchBar: I18n {
         }
     }
     
-    func loc_localeDidChange() {
+    override func loc_localeDidChange() {
+        super.loc_localeDidChange()
         text = loc_keysDictionary[UISearchBar.loc_titleKey]?.localised
             .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UISearchBar.case_titleKey] ?? ""))
         placeholder = loc_keysDictionary[UISearchBar.loc_placeholderKey]?.localised
             .transform(with: I18nCaseTransform(rawValue: loc_keysDictionary[UISearchBar.case_placeholderKey] ?? ""))
-        accessibilityLabel = loc_keysDictionary[UISearchBar.loc_accessibilityLabelKey]?.localised
-        accessibilityHint = loc_keysDictionary[UISearchBar.loc_accessibilityHintKey]?.localised
     }
 }
