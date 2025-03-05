@@ -87,8 +87,8 @@ public extension I18nManager {
     /// - Returns: The localized string for the specified key and language, or the fallback language if the localization is not found.
     func localizedString(forKey key: String, language: String? = nil) -> String {
 
-        var localizedString = localizationPerformingBlock(key, language ?? self.language)
-        
+        let localizedString = localizationPerformingBlock(key, language ?? self.language)
+
         guard localizedString == key else {
             return localizedString
         }

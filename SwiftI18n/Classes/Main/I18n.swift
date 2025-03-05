@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol I18n: class {
+protocol I18n: AnyObject {
     func loc_localeDidChange()
 }
 
