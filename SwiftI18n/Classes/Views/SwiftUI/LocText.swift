@@ -7,6 +7,44 @@
 
 import SwiftUI
 
+private struct AcessibilityLabelModifier: ViewModifier {
+    let key: String
+
+    func body(content: Content) -> some View {
+        if #available(iOS 14.0, *) {
+            content
+                .accessibilityLabel(Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+        } else {
+            content
+                .accessibility(label: Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+        }
+    }
+}
+
+private struct AcessibilityHintModifier: ViewModifier {
+    let key: String
+
+    func body(content: Content) -> some View {
+        if #available(iOS 14.0, *) {
+            content
+                .accessibilityHint(Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+        } else {
+            content
+                .accessibility(hint: Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+        }
+    }
+}
+
+extension View {
+    func setAcessibilityLabel(key: String) -> some View {
+        modifier(AcessibilityLabelModifier(key: key))
+    }
+
+    func setAcessibilityHint(key: String) -> some View {
+        modifier(AcessibilityHintModifier(key: key))
+    }
+}
+
 public struct LanguageModifier: ViewModifier {
 
     private let didUpdatedLanguage: (String) -> Void
