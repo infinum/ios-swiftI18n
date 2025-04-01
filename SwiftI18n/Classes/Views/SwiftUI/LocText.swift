@@ -35,7 +35,7 @@ private struct AcessibilityHintModifier: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     func setAcessibilityLabel(key: String) -> some View {
         modifier(AcessibilityLabelModifier(key: key))
     }
