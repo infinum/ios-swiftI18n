@@ -8,29 +8,35 @@
 import SwiftUI
 
 private struct AcessibilityLabelModifier: ViewModifier {
+    @State private var language = I18nManager.instance.language
     let key: String
 
     func body(content: Content) -> some View {
         if #available(iOS 14.0, *) {
             content
-                .accessibilityLabel(Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+                .accessibilityLabel(Text(I18nManager.instance.localizedString(forKey: key, language: language)))
+                .modifier(LanguageModifier(didUpdatedLanguage: { language = $0 }))
         } else {
             content
-                .accessibility(label: Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+                .accessibility(label: Text(I18nManager.instance.localizedString(forKey: key, language: language)))
+                .modifier(LanguageModifier(didUpdatedLanguage: { language = $0 }))
         }
     }
 }
 
 private struct AcessibilityHintModifier: ViewModifier {
+    @State private var language = I18nManager.instance.language
     let key: String
 
     func body(content: Content) -> some View {
         if #available(iOS 14.0, *) {
             content
-                .accessibilityHint(Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+                .accessibilityHint(Text(I18nManager.instance.localizedString(forKey: key, language: language)))
+                .modifier(LanguageModifier(didUpdatedLanguage: { language = $0 }))
         } else {
             content
-                .accessibility(hint: Text(I18nManager.instance.localizedString(forKey: key, language: I18nManager.instance.language)))
+                .accessibility(hint: Text(I18nManager.instance.localizedString(forKey: key, language: language)))
+                .modifier(LanguageModifier(didUpdatedLanguage: { language = $0 }))
         }
     }
 }
