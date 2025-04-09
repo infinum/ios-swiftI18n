@@ -43,6 +43,7 @@
 		E449BAC631AE7F5C5F3C7C85BE818281 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		F788FC1CEA89E54718B4103A666EEC1E /* UILabel+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD26D32BC9BDDD10191E82ABE27D69 /* UILabel+I18n_loc.swift */; };
 		FBE0C1B103AB1728DB8D6311B59553F8 /* UITabBarItem+I18n_case.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F39DA08645819396392D41001A1967B /* UITabBarItem+I18n_case.swift */; };
+		42669DFA2DA68D6600A80217 /* LocTextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42669DF92DA68D6200A80217 /* LocTextViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		38501282885DBACDDD6962EEA0D44F65 /* I18nManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18nManager.swift; sourceTree = "<group>"; };
 		38921550512DAF20E364AD9BCB9FD326 /* Pods_SwiftI18n_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftI18n_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB122EBCE77050F0CC778BF08AC1112 /* SwiftI18n.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SwiftI18n.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		42669DF92DA68D6200A80217 /* LocTextViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocTextViewExtensions.swift; sourceTree = "<group>"; };
 		471802C13CCA684411A556859A7F3E75 /* Pods-SwiftI18n_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftI18n_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		512DCCC38E2F5C20AF01C61B3CA64F03 /* Pods-SwiftI18n_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftI18n_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		550BC87B12355326D08BC8E7D842C6D6 /* Pods-SwiftI18n_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftI18n_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				251C6F5FD6F7A89B6BAEF178ECFC5A2B /* Localizable.swift */,
 				1AC8D3E023AB71825CBBB0EE1CFED8A7 /* NSNotification+I18n.swift */,
 				FD2CF1A4D8985524A955F1402E74FD5B /* String+I18n.swift */,
+				42669DF92DA68D6200A80217 /* LocTextViewExtensions.swift */,
 			);
 			name = Main;
 			path = SwiftI18n/Classes/Main;
@@ -538,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B04B1C5573BB822E7A5215873895CCDE /* Pods-SwiftI18n_Tests-dummy.m in Sources */,
+				42669DFA2DA68D6600A80217 /* LocTextViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
