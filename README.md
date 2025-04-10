@@ -1,9 +1,5 @@
 # SwiftI18n
 
-[![Version](https://img.shields.io/cocoapods/v/SwiftI18n.svg?style=flat)](http://cocoapods.org/pods/SwiftI18n)
-[![License](https://img.shields.io/cocoapods/l/SwiftI18n.svg?style=flat)](http://cocoapods.org/pods/SwiftI18n)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftI18n.svg?style=flat)](http://cocoapods.org/pods/SwiftI18n)
-
 ## Description
 
 With Swift-I18n, you can give users the possibility to make your app's language different from the system's. Language can be changed from inside the app, and if you use `locTitleKey` in UIKit or `LocText` in SwiftUI, language change will be automatically reflected on all the UI elements that are already loaded and rendered on the screen.
