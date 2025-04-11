@@ -83,6 +83,7 @@ public struct LocText: View {
     public var body: some View {
         text
             .modifier(LanguageModifier(didUpdatedLanguage: { language = $0 }))
+            .environment(\.locale, Locale(identifier: language))
     }
 }
 
