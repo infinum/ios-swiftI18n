@@ -51,10 +51,19 @@ public class I18nManager {
             NotificationCenter.default.post(name: .loc_LanguageDidChangeNotification, object: nil)
         }
         get {
-            guard UIApplication.shared.accessibilityLanguage == nil else { return getCurrentLanguage() }
-            let language = getCurrentLanguage()
-            UIApplication.shared.accessibilityLanguage = language
-            return language
+            if let language = _language {
+                return language
+            }
+            _language = UserDefaults.standard.string(forKey: .language)
+            if let language = _language {
+                return language
+            }
+            if let defaultLanguage = defaultLanguage {
+                return defaultLanguage
+            }
+            return availableLanguages
+                .flatMap { return Bundle.preferredLocalizations(from: $0, forPreferences: Locale.preferredLanguages).first }
+                ?? "en"
         }
     }
 }
@@ -94,25 +103,6 @@ public extension I18nManager {
     
     subscript(locKey: String) -> String {
         return localizedString(forKey: locKey)
-    }
-}
-
-private extension I18nManager {
-
-    func getCurrentLanguage() -> String {
-        if let language = _language {
-            return language
-        }
-        _language = UserDefaults.standard.string(forKey: .language)
-        if let language = _language {
-            return language
-        }
-        if let defaultLanguage = defaultLanguage {
-            return defaultLanguage
-        }
-        return availableLanguages
-            .flatMap { return Bundle.preferredLocalizations(from: $0, forPreferences: Locale.preferredLanguages).first }
-            ?? "en"
     }
 }
 
