@@ -7,15 +7,46 @@
 //
 
 import UIKit
+import SwiftUI
+import SwiftI18n
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
+
+        setupViewHierarchy()
+        setupDefaultLanguage()
+
         return true
     }
-
 }
 
+// MARK: - Setup default language
+
+private extension AppDelegate {
+
+    func setupDefaultLanguage() {
+        I18nManager.instance.defaultLanguage = Language.english.rawValue
+        I18nManager.instance.fallbackLanguage = Language.english.rawValue
+    }
+}
+
+// MARK: - Setup view hierarchy
+
+private extension AppDelegate {
+
+    func setupViewHierarchy() {
+        let tabBarController = TabBarViewController()
+
+        let window = UIWindow()
+        window.rootViewController = tabBarController
+        window.makeKeyAndVisible()
+        self.window = window
+    }
+}
