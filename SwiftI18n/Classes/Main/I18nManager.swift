@@ -16,7 +16,8 @@ public class I18nManager {
     
     public var defaultLanguage: String?
     public var availableLanguages: [String]?
-    
+    public var bundle: Bundle = .main
+
     /// The language code to use as a fallback if a translation is not available in the preferred language.
     ///
     /// **Example**:
@@ -37,8 +38,8 @@ public class I18nManager {
     /// Setting `fallbackLanguage` should be done with consideration of these potential overrides
     public var fallbackLanguage: String?
     
-    public var localizationPerformingBlock: (_ key: String, _ language: String)->(String) = { (key, language) in
-        return NSLocalizedString(key, tableName: language, comment: "")
+    public func localizationPerformingBlock(_ key: String, _ language: String, _ bundle: Bundle = .main) -> (String) {
+        NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
     }
 
     private var _language: String?
@@ -87,7 +88,7 @@ public extension I18nManager {
     /// - Returns: The localized string for the specified key and language, or the fallback language if the localization is not found.
     func localizedString(forKey key: String, language: String? = nil) -> String {
 
-        let localizedString = localizationPerformingBlock(key, language ?? self.language)
+        let localizedString = localizationPerformingBlock(key, language ?? self.language, bundle)
 
         guard localizedString == key else {
             return localizedString
@@ -97,8 +98,7 @@ public extension I18nManager {
             return localizedString
         }
 
-        return localizationPerformingBlock(key, fallbackLanguage)
-        
+        return localizationPerformingBlock(key, fallbackLanguage, bundle)
     }
     
     subscript(locKey: String) -> String {
