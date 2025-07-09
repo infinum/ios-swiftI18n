@@ -1,12 +1,18 @@
 # SwiftI18n
 
-[![Version](https://img.shields.io/cocoapods/v/SwiftI18n.svg?style=flat)](http://cocoapods.org/pods/SwiftI18n)
-[![License](https://img.shields.io/cocoapods/l/SwiftI18n.svg?style=flat)](http://cocoapods.org/pods/SwiftI18n)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftI18n.svg?style=flat)](http://cocoapods.org/pods/SwiftI18n)
+## Description
 
-## Example
+With Swift-I18n, you can give users the possibility to make your app's language different from the system's. Language can be changed from inside the app, and if you use `locTitleKey` in UIKit or `LocText` in SwiftUI, language change will be automatically reflected on all the UI elements that are already loaded and rendered on the screen.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Table of contents
+
+* [Requirements](#requirements)
+* [Getting started](#getting-started)
+* [Usage](#usage)
+* [Privacy](#privacy)
+* [Contributing](#contributing)
+* [License](#license)
+* [Credits](#credits)
 
 ## Requirements
 
@@ -14,7 +20,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 * Swift 5.0
 * iOS 9.0+
 
-## Installation
+## Getting started
 
 ### Cocoapods
 
@@ -78,16 +84,16 @@ someButton.locAccessibilityHintKey = "button_accessibility_hint_key"
 Now when language changes, your `someLabel`'s title, accessibility label and hint, automaticaly change. Isn't that great!?
 
 Supported elements:
-```UILabel```
-```UIButton```
-```UITextFiled```
-```UITextView```
-```UIViewController```
-```UIBarButtonItem```
-```UITabBarItem```
-```UINavigationItem```
+- ```UILabel```
+- ```UIButton```
+- ```UITextFiled```
+- ```UITextView```
+- ```UIViewController```
+- ```UIBarButtonItem```
+- ```UITabBarItem```
+- ```UINavigationItem```
 
-**And the most important thing, all of those `locTitleKey`s, `locAccessibilityLabelKey`s, `locAccessibilityHintKey`s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
+**And another important thing, all of those `locTitleKey`s, `locAccessibilityLabelKey`s, `locAccessibilityHintKey`s are supported in ```Storyboards ``` as ```@IBInspectable ```.**
 
 ### SwiftUI Support
 
@@ -99,7 +105,7 @@ LocText("some_key")
 
 #### Integration with Polyglot
 
-Just cp this extension somewhere in your project
+Just copy/paste this extension somewhere in your project
 
 ```swift
 extension LocText {
@@ -135,29 +141,23 @@ which you can use like this:
 someButton.setCaseTransform(.uppercased, for: .normal)
 ```
 
-You can also set case transform in ```Storyboards ```.
-
+You can also set case transform in ```Storyboards ```
 
 ### Fallback Language
 
 In some scenarios, a requested localization may not be available for a given language. To ensure a consistent user experience, the app provides a **fallback language** mechanism. This feature guarantees that if a translation is missing in the preferred language, a predefined fallback language will be used to retrieve the localization instead.
 
-#### Setting the Fallback Language
-
 You can configure the fallback language by setting the `fallbackLanguage` property in your localization manager.
 
-For example in your LanguageInitializer class, initialize method, add the following line:
+Simply use the following line:
 
 ```swift
 I18nManager.instance.fallbackLanguage = "en_gb"
 ```
 
+### Working with Polyglot's `Strings` enum
 
-### Working with Polyglot client Strings enum
-
-For SwiftI18n to work beautifly with polyglot client created `Strings` enum you will need to copy:
-`SwiftI18n/Polyglot/PolyglotSwiftI18Extensions.swift`
-into your project.
+For SwiftI18n to work beautifully with `Strings` enum from [Polyglot](https://github.com/infinum/ios-polyglot-cli), you will need to copy [PolyglotSwiftI18Extensions.swift](SwiftI18n/Polyglot/PolyglotSwiftI18Extensions.swift) into your project.
 
 By doing this you can now set translations to your UI elements with ease:
 
@@ -167,7 +167,7 @@ someButton.loc.accessibilityLabelKey = .somePolyglotKey
 someButton.loc.accessibilityLabelHint = .somePolyglotKey
 ```
 
-## Not supported 
+### Not supported 
 
 ```
 Attributed strings
@@ -177,10 +177,42 @@ Attributed strings
 
 SwiftI18n does not collect any user data. We have provided a [privacy manifest](https://github.com/infinum/ios-swiftI18n/blob/master/SwiftI18n/SupportingFiles/PrivacyInfo.xcprivacy) file that can be included in your app.
 
-## Author
+## Contributing
 
-Vlaho Poluta, vlaho.poluta@infinum.hr
+We believe that the community can help us improve and build better a product.
+Please refer to our [contributing guide](CONTRIBUTING.md) to learn about the types of contributions we accept and the process for submitting them.
+
+To ensure that our community remains respectful and professional, we defined a [code of conduct](CODE_OF_CONDUCT.md) <!-- and [coding standards](<link>) --> that we expect all contributors to follow.
+
+We appreciate your interest and look forward to your contributions.
 
 ## License
 
-SwiftI18n is available under the MIT license. See the LICENSE file for more info.
+```text
+Copyright 2024 Infinum
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+## Credits
+
+Maintained and sponsored by [Infinum](https://infinum.com).
+
+<div align="center">
+    <a href='https://infinum.com'>
+    <picture>
+        <source srcset="https://assets.infinum.com/brand/logo/static/white.svg" media="(prefers-color-scheme: dark)">
+        <img src="https://assets.infinum.com/brand/logo/static/default.svg">
+    </picture>
+    </a>
+</div>
