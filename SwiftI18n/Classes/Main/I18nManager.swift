@@ -38,8 +38,8 @@ public class I18nManager {
     /// Setting `fallbackLanguage` should be done with consideration of these potential overrides
     public var fallbackLanguage: String?
     
-    public var localizationPerformingBlock: (_ key: String, _ language: String, _ bundle: Bundle) -> (String) = { (key, language, bundle) in
-        return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+    public func localizationPerformingBlock(_ key: String, _ language: String, _ bundle: Bundle = .main) -> (String) {
+        NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
     }
 
     private var _language: String?
