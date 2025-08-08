@@ -17,6 +17,7 @@
 		3131D0EE3E90BC4400A1526A8E60C99C /* UITabBarItem+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C1D7A30A3CE34E40D090D0CFCC7936 /* UITabBarItem+I18n_loc.swift */; };
 		3259B99B970DB13B35F7F5356DCEE9B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		3C0875081A6FD2342ADF8F7270F253FB /* UITextField+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF99D8D54B29295662D079D73B1696C /* UITextField+I18n_loc.swift */; };
+		42A699292E45D46B0012347E /* LocTextViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A699282E45D4690012347E /* LocTextViewExtensions.swift */; };
 		4B49BC600D7556936AE3A3CB5B353D1F /* UIButton+I18n_case.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26B5373FAA013B8FF7015F7694A7D82 /* UIButton+I18n_case.swift */; };
 		4CBD29C86C50687F3DC68165AD6DE881 /* Pods-SwiftI18n_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9498A7563F45DEA64DCBFF21844267A4 /* Pods-SwiftI18n_Tests-dummy.m */; };
 		548171C127C72F08BC75C1FFC1D6296A /* SwiftI18n-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5F860E4729C3AD89C5DEE1D599A72C /* SwiftI18n-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -93,6 +94,7 @@
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		39C255A3549AB8BC2B51D2A661F9DF6B /* UITabBarItem+I18n_case.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+I18n_case.swift"; sourceTree = "<group>"; };
 		4104D5B0647036ECCD2299DAB381F5D6 /* UINavigationItem+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+I18n_loc.swift"; sourceTree = "<group>"; };
+		42A699282E45D4690012347E /* LocTextViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocTextViewExtensions.swift; sourceTree = "<group>"; };
 		444C15644243F525B275565549A2CE0C /* I18n.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = I18n.swift; sourceTree = "<group>"; };
 		44550AE925EE1BA62271129B033D77C4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		471802C13CCA684411A556859A7F3E75 /* Pods-SwiftI18n_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftI18n_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 		B39158A33BE6E77537C0E47442E58EF6 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				42A699282E45D4690012347E /* LocTextViewExtensions.swift */,
 				B76CC5272E44BBA100072E9D /* AccessibilityModifiers.swift */,
 				B76CC5252E44BB7900072E9D /* LanguageModifier.swift */,
 				1B5A0AE1DCFC4CFE08976D6E7F31DBC8 /* LocText.swift */,
@@ -590,6 +593,7 @@
 				CFB8BFB11CC5546BC049A51384914076 /* I18nCaseI18nCaseTransform.swift in Sources */,
 				74107C9E10F801BEECBBB91BA8E84A05 /* I18nCaseTransformable.swift in Sources */,
 				CFACFBAF752B71A583B68C7C5EA5BD32 /* I18nManager.swift in Sources */,
+				42A699292E45D46B0012347E /* LocTextViewExtensions.swift in Sources */,
 				B76CC5262E44BB7C00072E9D /* LanguageModifier.swift in Sources */,
 				E3BB4B611D98FFFAC610F40651C73FED /* Localizable.swift in Sources */,
 				998004833E8AE196872278D8AE81E6C8 /* LocText.swift in Sources */,
