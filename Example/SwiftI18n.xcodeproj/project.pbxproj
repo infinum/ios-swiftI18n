@@ -275,12 +275,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 5F5M64F878;
+						DevelopmentTeam = 3GN7X2W9W5;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 5F5M64F878;
+						DevelopmentTeam = 3GN7X2W9W5;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -556,7 +556,7 @@
 			baseConfigurationReference = FF4E2F207209CBBA2D8E0781 /* Pods-SwiftI18n_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5F5M64F878;
+				DEVELOPMENT_TEAM = 3GN7X2W9W5;
 				INFOPLIST_FILE = SwiftI18n/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,7 +572,7 @@
 			baseConfigurationReference = 499C3638D1920D70CAF5C2B1 /* Pods-SwiftI18n_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5F5M64F878;
+				DEVELOPMENT_TEAM = 3GN7X2W9W5;
 				INFOPLIST_FILE = SwiftI18n/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -587,7 +587,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C027D458D793156381C165CE /* Pods-SwiftI18n_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 5F5M64F878;
+				DEVELOPMENT_TEAM = 3GN7X2W9W5;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -606,7 +606,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0BC4F40B8F9FDD601D5E8D5 /* Pods-SwiftI18n_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 5F5M64F878;
+				DEVELOPMENT_TEAM = 3GN7X2W9W5;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

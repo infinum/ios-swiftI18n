@@ -7,24 +7,6 @@
 
 import SwiftUI
 
-public struct LanguageModifier: ViewModifier {
-
-    private let didUpdatedLanguage: (String) -> Void
-
-    public init(didUpdatedLanguage: @escaping (String) -> Void){
-        self.didUpdatedLanguage = didUpdatedLanguage
-    }
-
-    public func body(content: Content) -> some View {
-        content
-            .onReceive(
-                NotificationCenter.default.publisher(for: .loc_LanguageDidChangeNotification).receive(on: DispatchQueue.main)
-            ) { _ in
-                didUpdatedLanguage(I18nManager.instance.language)
-            }
-    }
-}
-
 public struct LocText: View {
 
     fileprivate let content: [Content]
@@ -38,7 +20,8 @@ public struct LocText: View {
 
     public var body: some View {
         text
-            .modifier(LanguageModifier(didUpdatedLanguage: { language = $0 }))
+            .modifier(LanguageModifier(didUpdateLanguage: { language = $0 }))
+            .environment(\.locale, Locale(identifier: language))
     }
 }
 
