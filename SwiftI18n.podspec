@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '1.5.0'
+  s.version          = '2.0.0'
   s.summary          = 'I18n library for Swift'
   s.homepage         = 'https://github.com/infinum/ios-swiftI18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
