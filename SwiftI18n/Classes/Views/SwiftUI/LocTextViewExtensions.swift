@@ -11,11 +11,11 @@ import SwiftUI
 
 @available(iOS 14.0, *)
 public extension Menu where Label == LocText {
-    init(key: String, @ViewBuilder content: @escaping () -> Content) {
+    init(locTitleKey: String, @ViewBuilder content: @escaping () -> Content) {
         self.init {
             content()
         } label: {
-            LocText(key)
+            LocText(locTitleKey)
         }
     }
 }
@@ -23,16 +23,16 @@ public extension Menu where Label == LocText {
 // MARK: - Button -
 
 public extension Button where Label == LocText {
-    init(key: String, action: @escaping () -> Void) {
+    init(locTitleKey: String, action: @escaping () -> Void) {
         self.init(action: action) {
-            LocText(key)
+            LocText(locTitleKey)
         }
     }
 
     @available(iOS 15.0, *)
-    init(role: ButtonRole?, key: String, action: @escaping () -> Void) {
+    init(role: ButtonRole?, locTitleKey: String, action: @escaping () -> Void) {
         self.init(role: role, action: action) {
-            LocText(key)
+            LocText(locTitleKey)
         }
     }
 }
@@ -41,9 +41,9 @@ public extension Button where Label == LocText {
 
 @available(iOS 14.0, *)
 public extension Label where Title == LocText, Icon == EmptyView {
-    init(key: String) {
+    init(locTitleKey: String) {
         self.init {
-            LocText(key)
+            LocText(locTitleKey)
         } icon: {
             EmptyView()
         }
@@ -52,17 +52,17 @@ public extension Label where Title == LocText, Icon == EmptyView {
 
 @available(iOS 14.0, *)
 public extension Label where Title == LocText, Icon == Image {
-    init(key: String, systemImage: String) {
+    init(locTitleKey: String, systemImage: String) {
         self.init {
-            LocText(key)
+            LocText(locTitleKey)
         } icon: {
             Image(systemName: systemImage)
         }
     }
 
-    init(key: String, image: String) {
+    init(locTitleKey: String, image: String) {
         self.init {
-            LocText(key)
+            LocText(locTitleKey)
         } icon: {
             Image(image)
         }
@@ -72,9 +72,9 @@ public extension Label where Title == LocText, Icon == Image {
 // MARK: - Toggle -
 
 public extension Toggle where Label == LocText {
-    init(isOn: Binding<Bool>, key: String) {
+    init(isOn: Binding<Bool>, locTitleKey: String) {
         self.init(isOn: isOn) {
-            LocText(key)
+            LocText(locTitleKey)
         }
     }
 }
@@ -83,21 +83,21 @@ public extension Toggle where Label == LocText {
 
 @available(iOS 15.0, *)
 public extension TextField where Label == LocText {
-    init(text: Binding<String>, placeholder: String) {
+    init(text: Binding<String>, locPlaceholderKey: String) {
         self.init(text: text) {
-            LocText(placeholder)
+            LocText(locPlaceholderKey)
         }
     }
 
-    init(text: Binding<String>, formatter: Formatter, placeholder: String) {
+    init(text: Binding<String>, formatter: Formatter, locPlaceholderKey: String) {
         self.init(value: text, formatter: formatter) {
-            LocText(placeholder)
+            LocText(locPlaceholderKey)
         }
     }
 
-    init<F>(_ value: Binding<F.FormatInput?>, format: F, placeholder: String) where F : ParseableFormatStyle, F.FormatOutput == String {
+    init<F>(_ value: Binding<F.FormatInput?>, format: F, locPlaceholderKey: String) where F : ParseableFormatStyle, F.FormatOutput == String {
         self.init(value: value, format: format) {
-            LocText(placeholder)
+            LocText(locPlaceholderKey)
         }
     }
 }

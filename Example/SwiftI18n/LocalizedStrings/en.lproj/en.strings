@@ -23,3 +23,5 @@
 "text_field_example_placeholder" = "This is some placeholder text";
 "text_view_title" = "Text view";
 "text_view_example" = "This is a text view";
+"useless_button_hint" = "This button does nothing";
+"useless_button_label" = "Nothing";

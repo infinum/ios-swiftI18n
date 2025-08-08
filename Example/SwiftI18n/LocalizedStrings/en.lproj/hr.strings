@@ -22,3 +22,5 @@
 "text_field_example_placeholder" = "Popunite tekstualno polje";
 "text_view_title" = "Tekstualno mega polje";
 "text_view_example" = "Ovo je tekstualno mega polje";
+"useless_button_hint" = "Ovo dugme ne radi ništa";
+"useless_button_label" = "Ništa";
