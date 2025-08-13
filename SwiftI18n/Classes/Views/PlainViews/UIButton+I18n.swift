@@ -16,7 +16,7 @@ extension UIButton {
     }
     
     func loc_localeDidChange(`for` state: UIControl.State) {
-        guard let text = loc_keysDictionary[state]?.localised  else { return }
+        guard let text = loc_keysDictionary[state.rawValue]?.localised  else { return }
         setTitle(text, for: state)
     }
 }
