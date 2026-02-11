@@ -13,8 +13,8 @@ protocol I18n: AnyObject {
 }
 
 private struct AssociatedKeys {
-    static var keysDictionary = "loc_keysDictionary"
-    static var disposable = "loc_disposable"
+    static var keysDictionary: UInt8 = 0
+    static var disposable: UInt8 = 1
 }
 
 extension I18n {
