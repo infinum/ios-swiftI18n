@@ -37,11 +37,17 @@ public class I18nManager {
     ///
     /// Setting `fallbackLanguage` should be done with consideration of these potential overrides
     public var fallbackLanguage: String?
-    
-    public func localizationPerformingBlock(_ key: String, _ language: String, _ bundle: Bundle = .main) -> (String) {
-        NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
-    }
 
+    /// Optional closure that overrides the default localization lookup.
+    /// Use this to provide project-specific localization logic instead of the standard `NSLocalizedString` lookup.
+    public var localizationPerformingCustomBlock: ((_ key: String, _ language: String, _ bundle: Bundle) -> (String))?
+
+    /// Returns a localized string for the given key and language.
+    /// If ``localizationPerformingCustomBlock`` is set, it delegates to that closure, otherwise falls back to `NSLocalizedString`
+    public func localizationPerformingBlock(_ key: String, _ language: String, _ bundle: Bundle = .main) -> (String) {
+        localizationPerformingCustomBlock?(key, language, bundle) ?? NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+    }
+    
     private var _language: String?
     public var language: String {
         set(newValue) {
