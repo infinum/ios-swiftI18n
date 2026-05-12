@@ -8,6 +8,11 @@
 
 import UIKit
 
+private struct Constants {
+    static let lprojExtension = "lproj"
+    static let keyNotFound = "Placeholder string that gets returned if not value is found for the specified key."
+}
+
 public class I18nManager {
 
     public static var instance = I18nManager()
@@ -17,6 +22,7 @@ public class I18nManager {
     public var defaultLanguage: String?
     public var availableLanguages: [String]?
     public var bundle: Bundle = .main
+    public var stringCatalogs: [String]?
 
     /// The language code to use as a fallback if a translation is not available in the preferred language.
     ///
@@ -45,7 +51,27 @@ public class I18nManager {
     /// Returns a localized string for the given key and language.
     /// If ``localizationPerformingCustomBlock`` is set, it delegates to that closure, otherwise falls back to `NSLocalizedString`
     public func localizationPerformingBlock(_ key: String, _ language: String, _ bundle: Bundle = .main) -> (String) {
-        localizationPerformingCustomBlock?(key, language, bundle) ?? NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+        if let localizationPerformingCustomBlock {
+            return localizationPerformingCustomBlock(key, language, bundle)
+        }
+
+        /// Checks if project uses String Catalogs and if so locates the .lproj folder of the current language and extracts the localized strings from there
+        /// If the project uses .strings files instead we just utilize `NSLocalizedString` API
+        if let stringCatalogs,
+           let path = bundle.path(forResource: language, ofType: Constants.lprojExtension),
+           let bundle = Bundle(path: path)
+        {
+            for catalog in stringCatalogs {
+                let localizedString = bundle.localizedString(forKey: key, value: Constants.keyNotFound, table: catalog)
+                /// If the specified key is not found, `value` parameter will be returned instead so we compare to it to check if the key was found
+                if localizedString != Constants.keyNotFound {
+                    return localizedString
+                }
+            }
+            return key
+        } else {
+            return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+        }
     }
     
     private var _language: String?
