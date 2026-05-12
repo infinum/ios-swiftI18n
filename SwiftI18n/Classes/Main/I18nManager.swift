@@ -10,7 +10,7 @@ import UIKit
 
 private struct Constants {
     static let lprojExtension = "lproj"
-    static let keyNotFound = "Placeholder string that gets returned if not value is found for the specified key."
+    static let keyNotFoundFallbackValue = UUID().uuidString
 }
 
 public class I18nManager {
@@ -23,7 +23,6 @@ public class I18nManager {
     public var availableLanguages: [String]?
     public var bundle: Bundle = .main
     public var localizationSource: LocalizationSource = .stringsFiles
-
 
     /// The language code to use as a fallback if a translation is not available in the preferred language.
     ///
@@ -60,13 +59,13 @@ public class I18nManager {
         case .stringsFiles:
             return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
         case .stringCatalogs(let catalogs):
-            guard let path = bundle.path(forResource: language, ofType: Constants.lprojExtension), let bundle = Bundle(path: path) else {
+            guard let path = bundle.path(forResource: language, ofType: Constants.lprojExtension), let languageBundle = Bundle(path: path) else {
                 return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
             }
             for catalog in catalogs {
-                let localizedString = bundle.localizedString(forKey: key, value: Constants.keyNotFound, table: catalog)
-                /// If the specified key is not found, `value` parameter will be returned instead so we compare to it to check if the key was found
-                if localizedString != Constants.keyNotFound {
+                let localizedString = languageBundle.localizedString(forKey: key, value: Constants.keyNotFoundFallbackValue, table: catalog)
+                // If the specified key is not found, `value` parameter will be returned instead so we compare to it to check if the key was found
+                if localizedString != Constants.keyNotFoundFallbackValue {
                     return localizedString
                 }
             }
