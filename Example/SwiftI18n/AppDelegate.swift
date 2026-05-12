@@ -34,7 +34,7 @@ private extension AppDelegate {
     func setupDefaultLanguage() {
         I18nManager.instance.defaultLanguage = Language.english.rawValue
         I18nManager.instance.fallbackLanguage = Language.english.rawValue
-        I18nManager.instance.stringCatalogs = ["Main", "Settings"]
+        I18nManager.instance.localizationSource = .stringCatalogs(catalogs: ["Main", "Settings"])
     }
 }
 

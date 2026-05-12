@@ -22,7 +22,8 @@ public class I18nManager {
     public var defaultLanguage: String?
     public var availableLanguages: [String]?
     public var bundle: Bundle = .main
-    public var stringCatalogs: [String]?
+    public var localizationSource: LocalizationSource = .stringsFiles
+
 
     /// The language code to use as a fallback if a translation is not available in the preferred language.
     ///
@@ -55,13 +56,14 @@ public class I18nManager {
             return localizationPerformingCustomBlock(key, language, bundle)
         }
 
-        /// Checks if project uses String Catalogs and if so locates the .lproj folder of the current language and extracts the localized strings from there
-        /// If the project uses .strings files instead we just utilize `NSLocalizedString` API
-        if let stringCatalogs,
-           let path = bundle.path(forResource: language, ofType: Constants.lprojExtension),
-           let bundle = Bundle(path: path)
-        {
-            for catalog in stringCatalogs {
+        switch localizationSource {
+        case .stringsFiles:
+            return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+        case .stringCatalogs(let catalogs):
+            guard let path = bundle.path(forResource: language, ofType: Constants.lprojExtension), let bundle = Bundle(path: path) else {
+                return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+            }
+            for catalog in catalogs {
                 let localizedString = bundle.localizedString(forKey: key, value: Constants.keyNotFound, table: catalog)
                 /// If the specified key is not found, `value` parameter will be returned instead so we compare to it to check if the key was found
                 if localizedString != Constants.keyNotFound {
@@ -69,8 +71,6 @@ public class I18nManager {
                 }
             }
             return key
-        } else {
-            return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
         }
     }
     
