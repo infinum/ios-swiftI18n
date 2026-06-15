@@ -1,6 +1,6 @@
 //
 //  LocalizationSource.swift
-//  Pods
+//  SwiftI18n
 //
 //  Created by Andrija Ostojic on 12. 5. 2026..
 //
