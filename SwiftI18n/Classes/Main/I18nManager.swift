@@ -75,6 +75,8 @@ public class I18nManager {
             return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
         case .stringCatalogs(let catalogs):
             guard let path = bundle.path(forResource: language, ofType: Constants.lprojExtension), let languageBundle = Bundle(path: path) else {
+                // Misconfiguration: `.stringCatalogs` is set but no `.lproj` bundle exists for this language.
+                assertionFailure("SwiftI18n: localizationSource is .stringCatalogs but no '\(language).lproj' bundle was found in \(bundle). Check that the String Catalogs are present and the language code is correct.")
                 return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
             }
             for catalog in catalogs {
