@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                        DESC
   
   s.requires_arc = true
-  s.ios.deployment_target = '15.0'
+  s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   
   s.default_subspec = 'I18n'
