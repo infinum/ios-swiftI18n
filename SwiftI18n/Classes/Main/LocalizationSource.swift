@@ -13,6 +13,10 @@ public enum LocalizationSource {
 
     /// Resolves strings from one or more String Catalogs (`.xcstrings`).
     ///
+    /// The order of `catalogs` is semantically meaningful: catalogs are searched in the given order and the
+    /// first match wins. If the same key exists in more than one catalog, the one listed earlier in the array
+    /// takes precedence (e.g. for `["Main", "Settings"]`, a key present in both is resolved from `Main`).
+    ///
     /// - Parameter catalogs: The catalog names to look up, i.e. the `.xcstrings` filenames without the extension
     ///   (e.g. `["Main", "Settings"]` for `Main.xcstrings` and `Settings.xcstrings`).
     case stringCatalogs(catalogs: [String])
