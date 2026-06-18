@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftI18n'
-  s.version          = '2.0.1'
+  s.version          = '2.1.0'
   s.summary          = 'I18n library for Swift'
   s.homepage         = 'https://github.com/infinum/ios-swiftI18n'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                        DESC
   
   s.requires_arc = true
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
   s.swift_version = '5.0'
   
   s.default_subspec = 'I18n'
