@@ -1,6 +1,6 @@
 //
 //  UIView+I18n_case.swift
-//  Pods
+//  SwiftI18n
 //
 //  Created by Andrija Ostojic on 19.2.25..
 //

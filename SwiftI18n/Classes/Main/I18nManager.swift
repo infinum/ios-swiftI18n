@@ -8,6 +8,11 @@
 
 import UIKit
 
+private struct Constants {
+    static let lprojExtension = "lproj"
+    static let keyNotFoundFallbackValue = UUID().uuidString
+}
+
 public class I18nManager {
 
     public static var instance = I18nManager()
@@ -17,6 +22,16 @@ public class I18nManager {
     public var defaultLanguage: String?
     public var availableLanguages: [String]?
     public var bundle: Bundle = .main
+
+    /// The source used to resolve localized strings.
+    ///
+    /// Defaults to ``LocalizationSource/stringsFiles`` to preserve backwards compatibility with the
+    /// `NSLocalizedString`-based lookup, so existing integrations keep working without any changes.
+    ///
+    /// **Important Note**: Set this before the first localization lookup, otherwise early lookups may
+    /// resolve against the wrong source. In practice this means configuring it during app startup
+    /// (e.g. in `application(_:didFinishLaunchingWithOptions:)`) before any views or strings are loaded.
+    public var localizationSource: LocalizationSource = .stringsFiles
 
     /// The language code to use as a fallback if a translation is not available in the preferred language.
     ///
@@ -38,14 +53,41 @@ public class I18nManager {
     /// Setting `fallbackLanguage` should be done with consideration of these potential overrides
     public var fallbackLanguage: String?
 
-    /// Optional closure that overrides the default localization lookup.
-    /// Use this to provide project-specific localization logic instead of the standard `NSLocalizedString` lookup.
+    /// Optional closure that overrides localization lookup entirely.
+    /// Use this to provide project-specific localization logic.
+    ///
+    /// **Precedence**: When set, this closure takes precedence over ``localizationSource`` based lookup
+    /// (custom block > localizationSource) and is used for every lookup, regardless of the configured source.
     public var localizationPerformingCustomBlock: ((_ key: String, _ language: String, _ bundle: Bundle) -> (String))?
 
     /// Returns a localized string for the given key and language.
-    /// If ``localizationPerformingCustomBlock`` is set, it delegates to that closure, otherwise falls back to `NSLocalizedString`
+    ///
+    /// Resolution precedence:
+    /// 1. If ``localizationPerformingCustomBlock`` is set, it delegates to that closure.
+    /// 2. Otherwise it resolves against the configured ``localizationSource`` (`.strings` files or String Catalogs).
     public func localizationPerformingBlock(_ key: String, _ language: String, _ bundle: Bundle = .main) -> (String) {
-        localizationPerformingCustomBlock?(key, language, bundle) ?? NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+        if let localizationPerformingCustomBlock {
+            return localizationPerformingCustomBlock(key, language, bundle)
+        }
+
+        switch localizationSource {
+        case .stringsFiles:
+            return NSLocalizedString(key, tableName: language, bundle: bundle, comment: "")
+        case .stringCatalogs(let catalogs):
+            guard let path = bundle.path(forResource: language, ofType: Constants.lprojExtension), let languageBundle = Bundle(path: path) else {
+                // Misconfiguration: `.stringCatalogs` is set but no `.lproj` bundle exists for this language.
+                assertionFailure("SwiftI18n: localizationSource is .stringCatalogs but no '\(language).lproj' bundle was found in \(bundle). Check that the String Catalogs are present and the language code is correct.")
+                return key
+            }
+            for catalog in catalogs {
+                let localizedString = languageBundle.localizedString(forKey: key, value: Constants.keyNotFoundFallbackValue, table: catalog)
+                // If the specified key is not found, `value` parameter will be returned instead so we compare to it to check if the key was found
+                if localizedString != Constants.keyNotFoundFallbackValue {
+                    return localizedString
+                }
+            }
+            return key
+        }
     }
     
     private var _language: String?

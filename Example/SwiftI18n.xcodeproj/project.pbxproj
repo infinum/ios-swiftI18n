@@ -12,13 +12,13 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		B70D22142DACF48F00F1E8BF /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = B70D22102DACF48F00F1E8BF /* en.strings */; };
-		B70D22152DACF48F00F1E8BF /* hr.strings in Resources */ = {isa = PBXBuildFile; fileRef = B70D22122DACF48F00F1E8BF /* hr.strings */; };
 		B70D22182DACF49A00F1E8BF /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D22162DACF49A00F1E8BF /* Language.swift */; };
 		B70D22212DACF4A200F1E8BF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D221F2DACF4A200F1E8BF /* TabBarViewController.swift */; };
 		B70D22222DACF4A200F1E8BF /* UIKitExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D221D2DACF4A200F1E8BF /* UIKitExampleViewController.swift */; };
 		B70D22232DACF4A200F1E8BF /* SwiftUIExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D221B2DACF4A200F1E8BF /* SwiftUIExampleView.swift */; };
 		B70D22242DACF4A200F1E8BF /* LanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70D22192DACF4A200F1E8BF /* LanguagePickerView.swift */; };
+		B72ACC8A2FB32776001C523B /* Settings.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B72ACC892FB32776001C523B /* Settings.xcstrings */; };
+		B7E6515B2EEDED1100D3C500 /* Main.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B7E6515A2EEDED1100D3C500 /* Main.xcstrings */; };
 		F0050BAEBE6F9D2BB756C402 /* Pods_SwiftI18n_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236A655011CFEED879B1E6B2 /* Pods_SwiftI18n_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,13 +47,13 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		B0BC4F40B8F9FDD601D5E8D5 /* Pods-SwiftI18n_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftI18n_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftI18n_Tests/Pods-SwiftI18n_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B70D220F2DACF48F00F1E8BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/en.strings; sourceTree = "<group>"; };
-		B70D22112DACF48F00F1E8BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/hr.strings; sourceTree = "<group>"; };
 		B70D22162DACF49A00F1E8BF /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		B70D22192DACF4A200F1E8BF /* LanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePickerView.swift; sourceTree = "<group>"; };
 		B70D221B2DACF4A200F1E8BF /* SwiftUIExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIExampleView.swift; sourceTree = "<group>"; };
 		B70D221D2DACF4A200F1E8BF /* UIKitExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExampleViewController.swift; sourceTree = "<group>"; };
 		B70D221F2DACF4A200F1E8BF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		B72ACC892FB32776001C523B /* Settings.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Settings.xcstrings; sourceTree = "<group>"; };
+		B7E6515A2EEDED1100D3C500 /* Main.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Main.xcstrings; sourceTree = "<group>"; };
 		B868848CBD897039C9F551CF /* SwiftI18n.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftI18n.podspec; path = ../SwiftI18n.podspec; sourceTree = "<group>"; };
 		C027D458D793156381C165CE /* Pods-SwiftI18n_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftI18n_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftI18n_Tests/Pods-SwiftI18n_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF4E2F207209CBBA2D8E0781 /* Pods-SwiftI18n_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftI18n_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftI18n_Example/Pods-SwiftI18n_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		B70D22132DACF48F00F1E8BF /* LocalizedStrings */ = {
 			isa = PBXGroup;
 			children = (
-				B70D22102DACF48F00F1E8BF /* en.strings */,
-				B70D22122DACF48F00F1E8BF /* hr.strings */,
+				B7E6515A2EEDED1100D3C500 /* Main.xcstrings */,
+				B72ACC892FB32776001C523B /* Settings.xcstrings */,
 			);
 			path = LocalizedStrings;
 			sourceTree = "<group>";
@@ -293,6 +293,7 @@
 				English,
 				en,
 				Base,
+				hr,
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			preferredProjectObjectVersion = 77;
@@ -311,9 +312,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70D22142DACF48F00F1E8BF /* en.strings in Resources */,
-				B70D22152DACF48F00F1E8BF /* hr.strings in Resources */,
+				B7E6515B2EEDED1100D3C500 /* Main.xcstrings in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				B72ACC8A2FB32776001C523B /* Settings.xcstrings in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,22 +426,6 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		B70D22102DACF48F00F1E8BF /* en.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B70D220F2DACF48F00F1E8BF /* en */,
-			);
-			name = en.strings;
-			sourceTree = "<group>";
-		};
-		B70D22122DACF48F00F1E8BF /* hr.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B70D22112DACF48F00F1E8BF /* en */,
-			);
-			name = hr.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -496,6 +481,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -546,6 +532,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};

@@ -1,6 +1,6 @@
 //
 //  UISearchBar+I18n_case.swift
-//  Pods-SwiftI18n_Example
+//  SwiftI18n
 //
 //  Created by Goran Brlas on 22/01/2019.
 //

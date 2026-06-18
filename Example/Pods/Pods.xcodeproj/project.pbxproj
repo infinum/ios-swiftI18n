@@ -34,6 +34,7 @@
 		B0A7CF678BF6FE2CCDC9CDB255CFC790 /* UITextView+I18n_loc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4018FC72863AF0F3F18AB2CE063E7 /* UITextView+I18n_loc.swift */; };
 		B2922A9C53EAEEC249BB21540840A9B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
 		B61D380DF439913F77059BDBC2E72FC3 /* String+I18n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B7717FA3FFDA585F86ADE7F33923B /* String+I18n.swift */; };
+		B72ACC8C2FB359A6001C523B /* LocalizationSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72ACC8B2FB3599E001C523B /* LocalizationSource.swift */; };
 		B76CC5262E44BB7C00072E9D /* LanguageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CC5252E44BB7900072E9D /* LanguageModifier.swift */; };
 		B76CC5282E44BBA900072E9D /* AccessibilityModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76CC5272E44BBA100072E9D /* AccessibilityModifiers.swift */; };
 		B7AE6C0F3510877A9B69F7786D86FB58 /* Pods-SwiftI18n_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B46516C4DBBB15483A68C5FEB5816FC6 /* Pods-SwiftI18n_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -121,6 +122,7 @@
 		B24F0CFCDA333499469164B77FC9DE5C /* SwiftI18n-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftI18n-Info.plist"; sourceTree = "<group>"; };
 		B3D4018FC72863AF0F3F18AB2CE063E7 /* UITextView+I18n_loc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView+I18n_loc.swift"; sourceTree = "<group>"; };
 		B46516C4DBBB15483A68C5FEB5816FC6 /* Pods-SwiftI18n_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftI18n_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B72ACC8B2FB3599E001C523B /* LocalizationSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationSource.swift; sourceTree = "<group>"; };
 		B76CC5252E44BB7900072E9D /* LanguageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModifier.swift; sourceTree = "<group>"; };
 		B76CC5272E44BBA100072E9D /* AccessibilityModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityModifiers.swift; sourceTree = "<group>"; };
 		BC66B5E8133A3ABF667D93DA8302B2F7 /* UIBarButtonItem+I18n_case.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+I18n_case.swift"; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				444C15644243F525B275565549A2CE0C /* I18n.swift */,
 				EBA6ABB778B6BFEC21A61C1C88FBCF7C /* I18nManager.swift */,
 				E20D43D052773F43CEDA332AA47AA27B /* Localizable.swift */,
+				B72ACC8B2FB3599E001C523B /* LocalizationSource.swift */,
 				F6FA7B2AB4AEAEBED70173D1AECC7F8D /* NSNotification+I18n.swift */,
 				8F5B7717FA3FFDA585F86ADE7F33923B /* String+I18n.swift */,
 			);
@@ -599,6 +602,7 @@
 				B9E4E4361B79ED95BFBBD12B5C9877EE /* UIBarButtonItem+I18n_case.swift in Sources */,
 				62CC5F030868C01D983D409C415916F3 /* UIBarButtonItem+I18n_loc.swift in Sources */,
 				4B49BC600D7556936AE3A3CB5B353D1F /* UIButton+I18n_case.swift in Sources */,
+				B72ACC8C2FB359A6001C523B /* LocalizationSource.swift in Sources */,
 				F0206426B19400766D227D91D947EE2E /* UIButton+I18n_loc.swift in Sources */,
 				19740C29BE4DDE4140C4913876106931 /* UILabel+I18n_case.swift in Sources */,
 				96A59E82F8E742F37A117194176C93DF /* UILabel+I18n_loc.swift in Sources */,

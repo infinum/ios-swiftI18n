@@ -143,6 +143,20 @@ someButton.setCaseTransform(.uppercased, for: .normal)
 
 You can also set case transform in ```Storyboards ```
 
+### Localization Source (String Catalogs)
+
+By default SwiftI18n resolves strings from legacy `.strings` files via `NSLocalizedString`. To use [String Catalogs](https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog) (`.xcstrings`) instead, set `localizationSource` with the catalog names (the `.xcstrings` filenames without the extension):
+
+```swift
+I18nManager.instance.localizationSource = .stringCatalogs(catalogs: ["Main", "Settings"])
+```
+
+The catalogs must be present in the main bundle. When a key exists in more than one catalog, the first catalog in the array wins.
+
+> **Note:** String Catalogs are an Xcode 15 build-time feature — Xcode compiles `.xcstrings` files into the standard `.strings`/`.stringsdict` resources that this lookup reads. You must build with **Xcode 15 or later** to use String Catalogs. The produced app still runs on the library's supported deployment target, so no minimum-OS bump is required at runtime.
+
+> **Important:** Set `localizationSource` *before* the first localization lookup — typically in `application(_:didFinishLaunchingWithOptions:)` *before* building your view hierarchy. Views read localized strings during construction, so if the source is configured after the UI is built, those early lookups resolve against the wrong source and untranslated keys appear in the UI. This failure is silent in release builds; in debug builds a missing language bundle triggers an `assertionFailure` to surface the misconfiguration.
+
 ### Fallback Language
 
 In some scenarios, a requested localization may not be available for a given language. To ensure a consistent user experience, the app provides a **fallback language** mechanism. This feature guarantees that if a translation is missing in the preferred language, a predefined fallback language will be used to retrieve the localization instead.

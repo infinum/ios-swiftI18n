@@ -1,6 +1,6 @@
 //
 //  AccessibilityModifiers.swift
-//  Pods
+//  SwiftI18n
 //
 //  Created by Andrija Ostojic on 7. 8. 2025..
 //
