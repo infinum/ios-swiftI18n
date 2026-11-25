@@ -19,6 +19,9 @@ DerivedData
 *.hmap
 *.ipa
 
+# Swift Package Manager
+.build/
+
 # Bundler
 .bundle
 
@@ -31,3 +34,8 @@ Carthage
 # `pod install` in .travis.yml
 #
 # Pods/
+
+# fastlane
+fastlane/test_output/
+fastlane/report.xml
+fastlane/README.md
