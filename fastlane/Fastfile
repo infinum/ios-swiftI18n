@@ -1,0 +1,18 @@
+default_platform(:ios)
+
+platform :ios do
+  lane :test do |options|
+    UI.user_error!("Pass the simulator to test on: device:<simulator UDID>") if options[:device].to_s.empty?
+    scan(
+      # The repo has more than one workspace (the SPM package has its own), so name the Example app's.
+      workspace: "Example/SwiftI18n.xcworkspace",
+      scheme: options[:scheme],
+      configuration: options[:configuration],   # nil = the scheme's Test configuration
+      destination: "platform=iOS Simulator,id=#{options[:device]}",
+      result_bundle: true,
+      output_directory: "fastlane/test_output",
+      # Skip building the index store: CI never uses it.
+      xcargs: "COMPILER_INDEX_STORE_ENABLE=NO"
+    )
+  end
+end
